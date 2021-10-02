@@ -28,7 +28,7 @@
 
         <div class="label">
             <label for="password_confirmation" value="{{ __('Confirm Password') }}" >Confirmar senha</label>
-            <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
         </div>
 
         @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -48,14 +48,14 @@
             </div>
         @endif
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="label">
             <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
-            <x-jet-button class="ml-4">
+            <button class="btn">
                 {{ __('Register') }}
-            </x-jet-button>
+            <button>
         </div>
         <div class="background"></div>
 </body>
