@@ -15,3 +15,17 @@ body {
     top: 0px;   
     left: 0px;
 }
+
+.label{
+  left: 800px;
+position: relative;
+border: 6px;
+padding: 40px;
+
+}
+
+label{
+  color: white;
+  padding-right: 6px;
+}
+
