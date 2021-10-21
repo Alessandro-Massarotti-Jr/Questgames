@@ -14,9 +14,10 @@ att, Alessandro
 /* Variaveis */
 :root{
   --cor-principal: #000000;
-  --cor-secundaria: #ffffff;
+  --cor-secundaria: #5c5858;
   --cor-terciaria: #ffffff;
-  --cor-retoques: #ffffff;
+  --cor-quaternaria: #353535;
+  --cor-retoques: #1feb04;
 }
 /* fim variaveis */
 
@@ -30,11 +31,12 @@ body {
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
+  background-color: var(--cor-principal);
 }
 
 header {
-  background-color: var(--cor-principal);
-  border-bottom: 1px solid #CCC;
+  background-color: var(--cor-quaternaria);
+ 
 }
 
 .row {
@@ -65,46 +67,68 @@ header {
   padding: 10px;
 }
 
-/* navbar */
-#navbar img {
-  width: 40px;
+/* sidebar */
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 250px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: var(--cor-secundaria);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-#navbar {
-  justify-content: space-between;
-  background-color: var(--cor-principal);
-  padding: 5px 0;
+/* The navigation menu links */
+.openbtn{
+  color:var(--cor-terciaria);
+}
+.openbtn:hover{
+  color:var(--cor-retoques);
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--cor-terciaria);
+  display: block;
+  transition: 0.3s;
 }
 
-#navbar a {
-  font-size: 14px;
-  color: #fff;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: var(--cor-retoques);
 }
 
-#navbar a:hover {
-  color: #F2A340;
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+  color: var(--cor-terciaria);
+}
+.sidenav .closebtn:hover {
+
+  color: var(--cor-retoques);
 }
 
-/* Search Container */
-#search-container {
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  padding: 50px;
-  text-align: center;
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
-#search-container h1 {
-  color: #F2A340;
-  margin-bottom: 30px;
-  font-weight: 900;
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
-#search-container form {
-  width: 50%;
-  margin: 0 auto;
-}
+
+
 
 /* Events list */
 #events-container {
@@ -219,8 +243,8 @@ header {
 /* footer */
 footer {
   text-align: center;
-  background-color: #353E48;
-  color: #FFF;
+  background-color: var(--cor-quaternaria);
+  color:var(--cor-terciaria);
   padding: 30px;
   position: absolute;
   bottom: 0;
