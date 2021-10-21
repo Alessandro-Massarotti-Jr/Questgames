@@ -1,5 +1,27 @@
-  
+/* 
+
+criar variavel css so colocar "--nome-da-variavel:"
+e para chamar ela no codigo é ex:
+color: var(--nome-da-variavel)
+meu foco ta em utilizar pra cores porem da para usar em outras coisas
+como margem espaçamento formatação de texto etc...
+
+att, Alessandro 
+*/
+
+
+
+/* Variaveis */
+:root{
+  --cor-principal: #000000;
+  --cor-secundaria: #ffffff;
+  --cor-terciaria: #ffffff;
+  --cor-retoques: #ffffff;
+}
+/* fim variaveis */
+
 /* General */
+
 * {
   font-family: 'Roboto';
 }
@@ -11,7 +33,7 @@ body {
 }
 
 header {
-  background-color: #FFF;
+  background-color: var(--cor-principal);
   border-bottom: 1px solid #CCC;
 }
 
@@ -50,7 +72,7 @@ header {
 
 #navbar {
   justify-content: space-between;
-  background-color: rgb(87, 66, 104);
+  background-color: var(--cor-principal);
   padding: 5px 0;
 }
 
