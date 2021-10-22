@@ -90,7 +90,6 @@ header {
   color:var(--cor-retoques);
 }
 .sidenav a {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: var(--cor-terciaria);
