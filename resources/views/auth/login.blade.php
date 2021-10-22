@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="geral">
-        <img class="logo" src="../img/QuestGames.png" alt="">
+        <img class="logo" src="../img/logo.png" alt="">
         <p class="txt_bem">Bem vindo! </p>
         <p class="txt_conta">Conecte em sua conta </p>
         @if (session('status'))
