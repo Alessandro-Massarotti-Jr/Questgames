@@ -61,7 +61,7 @@
             @yield('content')
         </div>
     </div>
-    <footer id="main">
+    <footer>
         <p>QuestGames &copy; 2021</p>
     </footer>
 
