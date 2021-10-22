@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header>
+    <header style="display: fçex;">
         {{-- dentro da sidebar --}}
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
@@ -54,6 +54,8 @@
         <h1 class="openbtn" onclick="openNav()">
             <ion-icon name="menu-outline"></ion-icon>
         </h1>
+
+        <img src="/img/QuestGames.png" alt="" class="logo">
 
     </header>
     <div class="container-fluid">

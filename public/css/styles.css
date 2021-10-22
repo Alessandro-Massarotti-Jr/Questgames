@@ -35,7 +35,7 @@ body {
 
 header {
   background-color: var(--cor-quaternaria);
- 
+ display: flex;
 }
 
 footer {
@@ -50,6 +50,16 @@ footer {
 
 footer p {
   margin-bottom: 0;
+}
+
+.logo {
+  position: relative;
+  top: 20px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px
+ 
 }
 
 
