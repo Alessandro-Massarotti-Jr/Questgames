@@ -11,7 +11,7 @@ att, Alessandro
 
 
 
-/* Variaveis */
+/**************************Variaveis**************************/
 :root{
   --cor-principal: #000000;
   --cor-secundaria: #323232;
@@ -19,9 +19,8 @@ att, Alessandro
   --cor-quaternaria: #212121;
   --cor-retoques: #0c9e35;
 }
-/* fim variaveis */
 
-/* General */
+/**************************General**************************/
 
 * {
   font-family: 'Roboto';
@@ -39,35 +38,22 @@ header {
  
 }
 
-.row {
-  margin: 0;
-}
-
-.container-fluid {
-  padding: 0;
-}
-
-.btn-primary {
-  background-color: #F2A340;
-  border: 2px solid #C28008;
-}
-
-.btn-primary:hover {
-  background-color: #C28008;
-  border-color: #C28008;
-}
-
-.msg {
-  background-color: #D4EDDA;
-  color: #155724;
-  border: 1px solid #C3E6CB;
-  width: 100%;
-  margin-bottom: 0;
+footer {
   text-align: center;
-  padding: 10px;
+  background-color: var(--cor-quaternaria);
+  color:var(--cor-terciaria);
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-/* sidebar */
+footer p {
+  margin-bottom: 0;
+}
+
+
+/**************************sidebar**************************/
 
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -118,6 +104,7 @@ header {
 #main {
   transition: margin-left .5s;
   padding: 20px;
+  margin-left: 250px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -127,129 +114,149 @@ header {
 }
 
 
+/**************************card de jogo**************************/
+.card-container{
+ display: flex;
+ flex-direction: row;
 
-
-/* Events list */
-#events-container {
-  padding: 50px;
 }
 
-#events-container h2 {
-  margin-bottom: 10px;
-}
-
-#events-container .subtitle {
-  color: #757575;
-  margin-bottom: 30px;
-}
-
-#cards-container {
-  display: flex;
-}
-
-#events-container .card {
-  flex: 1 1 24%;
-  max-width: 25%;
-  border-radius: 10px;
-  padding: 0;
-  margin: .5%;
-}
-
-#events-container img {
-  max-height: 150px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.card .card-date {
-  font-size: 12px;
-  color: #CCC;
-}
-
-.card .card-title {
-  color: #212121;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.card-participants {
-  font-size: 14px;
-  color: #757575;
-}
-
-/* Event create page */
-#event-create-container {
-  padding: 30px
-}
-
-#event-create-container label {
-  font-weight: bold;
-}
-
-#event-create-container input,
-#event-create-container select,
-#event-create-container textarea {
-  font-size: 12px;
-}
-
-/* Event page */
-#image-container,
-#info-container {
-  margin-top: 30px;
-}
-
-#image-container img {
-  border-radius: 10px;
-}
-
-#info-container h1 {
-  font-size: 36px;
-  font-weight: 900;
-}
-
-#info-container p {
-  margin: 0;
-  font-size: 14px;
-  display: flex;
-}
-
-#info-container h3,
-#description-container h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#info-container ion-icon {
-  font-size: 20px;
-  color: #F2A340;
-  margin-right: 5px;
-}
-
-#info-container #event-submit {
-  margin: 20px 0;
-}
-
-#items-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-#items-list li {
-  display: flex;
-}
-
-/* footer */
-footer {
+.card {
+  box-shadow: 0 4px 8px 0 var(--cor-quaternaria);
+  width: 30%;
+  margin: auto;
   text-align: center;
-  background-color: var(--cor-quaternaria);
-  color:var(--cor-terciaria);
-  padding: 30px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  font-family: arial;
+  background-color: var(--cor-secundaria);
+  display: flex;
+  margin:5px
+
 }
 
-footer p {
-  margin-bottom: 0;
+.price {
+  color:var(--cor-terciaria);
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color:var(--cor-terciaria);
+  background-color:var(--cor-principal);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card imf{
+  width: 100%;;
+}
+
+.card p{
+  color:var(--cor-terciaria);
+}
+
+.card h1{
+  color:var(--cor-terciaria);
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
