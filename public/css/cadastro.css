@@ -1,47 +1,154 @@
 body {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-.background {
-    position: fixed;
-    z-index: -1;
+    position: relative;
+    background-color: black;
+    z-index: 1;
     background-image: url("../img/Flogin.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    ;
-    width: 100%;
+    background-size: 50% 110%;
+    width: 97%;
     height: 100%;
-    top: 0px;
-    left: 0px;
+    top: 0%;
+    left: 0%;
+}
+
+@media screen and (max-width: 1152px) {
+    body {
+        background-image: url("../img/Flogin.png");
+        background-size: 53% 110%;
+        width: 95%;
+        height: 60%;
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-image: url("../img/Flogin.png");
+        background-size: 57% 110%;
+        width: 81%;
+        height: 60%;
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    body {
+        position: sticky;
+        background-image: url("../img/Flogin.png");
+        background-size: 100% 110%;
+        width: 15%;
+        height: 60%;
+        left: 0%;
+    }
 }
 
 .label {
-    left: 800px;
     position: relative;
+    border: 6px;
     padding: 40px;
 }
 
 label {
     color: white;
-    padding-right: 6px;
+    padding-right: 100px;
 }
 
-input {
+.div_cx_txt_email {
+    position: relative;
+    width: 50%;
+    height: 50px;
+    border-color: Transparent;
+    cursor: auto;
+    overflow: hidden;
+    caret-color: rgb(255, 255, 255);
+    outline: none;
+    font-size: 23px;
+    padding: 40px;
+    bottom: 70px;
+    left: 20%;
+}
+
+.cx_all {
+    position: relative;
     border-radius: 6px;
+    border-radius: 4px/4px;
+    border-style: ridge;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 0.1px solid #ffffff;
+    height: 30px;
+    width: 290px;
+    bottom: 0px;
+    left: 0%;
 }
 
-.btn {
-    background-color: blueviolet;
+.bt_login {
+    position: relative;
     color: white;
-    border-radius: 6px;
+    background: #666565;
+    border-radius: 5px;
+    width: 300px;
+    height: 36px;
+    left: 25%;
+    bottom: 30px;
 }
 
-.btn:hover {
-    background-color: rgb(85, 59, 107);
+.bt_login:hover {
+    background-color: #464545;
+    border-radius: 5px;
 }
 
-a {
-    color: yellow;
+.div_lembrar {
+    position: relative;
+    height: 35px;
+    width: 250px;
+    bottom: 35px;
+    left: 26%;
+    text-align: left;
+}
+
+.div_esqueceu {
+    position: relative;
+    height: 35px;
+    width: 135px;
+    left: 54%;
+    bottom: 69px;
+}
+
+.div_esqueceu1 {
+    color: skyblue;
+}
+
+.geral {
+    position: relative;
+    width: 520px;
+    height: 750px;
+    left: 55%;
+    top: 0px;
+}
+
+.txt_bem {
+    position: relative;
+    top: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    left: 40%;
+    width: 25%;
+}
+
+.txt_conta {
+    position: relative;
+    color: rgb(255, 255, 255);
+    left: 26%;
+    font-size: 33px;
+    bottom: 20px;
+    width: 56%;
+}
+
+.logo {
+    position: relative;
+    top: 20px;
+    height: 120px;
+    width: 450px;
+    left: 14%;
 }
