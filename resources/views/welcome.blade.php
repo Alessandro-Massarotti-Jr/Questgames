@@ -44,32 +44,11 @@
 
     <div class="card-container">
         <div class="card">
+          <a href="/">
             <h1>Titulo do jogo</h1>
             <img src="/img/HDC_logo.svg" alt="Denim Jeans">
             <p class="price">R$00,00</p>
-            <p><button>ver mais</button></p>
-            <p><button>carrinho</button></p>
-        </div>
-        <div class="card">
-            <h1>Titulo do jogo</h1>
-            <img src="/img/HDC_logo.svg" alt="Denim Jeans">
-            <p class="price">R$00,00</p>
-            <p><button>ver mais</button></p>
-            <p><button>carrinho</button></p>
-        </div>
-        <div class="card">
-            <h1>Titulo do jogo</h1>
-            <img src="/img/HDC_logo.svg" alt="Denim Jeans">
-            <p class="price">R$00,00</p>
-            <p><button>ver mais</button></p>
-            <p><button>carrinho</button></p>
-        </div>
-        <div class="card">
-            <h1>Titulo do jogo</h1>
-            <img src="/img/HDC_logo.svg" alt="Denim Jeans">
-            <p class="price">R$00,00</p>
-            <p><button>ver mais</button></p>
-            <p><button>carrinho</button></p>
+          </a>
         </div>
     </div>
 
