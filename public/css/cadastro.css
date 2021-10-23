@@ -5,7 +5,7 @@ body {
     background-image: url("../img/Flogin.png");
     background-repeat: no-repeat;
     background-size: 50% 110%;
-    width: 97%;
+    width: 99%;
     height: 100%;
     top: 0%;
     left: 0%;
@@ -23,16 +23,6 @@ body {
 
 @media screen and (max-width: 1000px) {
     body {
-        background-image: url("../img/Flogin.png");
-        background-size: 57% 110%;
-        width: 81%;
-        height: 60%;
-        left: 0%;
-    }
-}
-
-@media screen and (max-width: 890px) {
-    body {
         position: sticky;
         background-image: url("../img/Flogin.png");
         background-size: 100% 110%;
@@ -42,30 +32,45 @@ body {
     }
 }
 
+@media screen and (max-width: 890px) {
+    body {
+        position: sticky;
+        background-image: url("../img/Flogin.png");
+        width: 15%;
+        height: 60%;
+        left: 0%;
+    }
+}
+
 .label {
     position: relative;
-    border: 6px;
-    padding: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
 }
 
 label {
+    position: relative;
     color: white;
-    padding-right: 100px;
+    display: block;
+    margin-left: 18%;
 }
 
 .div_cx_txt_email {
     position: relative;
-    width: 50%;
-    height: 50px;
+    width: 90%;
+    height: 7%;
     border-color: Transparent;
     cursor: auto;
     overflow: hidden;
     caret-color: rgb(255, 255, 255);
     outline: none;
     font-size: 23px;
-    padding: 40px;
-    bottom: 70px;
-    left: 20%;
+    padding-top: 19px;
+    bottom: 85px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cx_all {
@@ -75,11 +80,22 @@ label {
     border-style: ridge;
     color: rgb(255, 255, 255);
     background-color: transparent;
-    border: 0.1px solid #ffffff;
     height: 30px;
     width: 290px;
-    bottom: 0px;
-    left: 0%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 2px;
+}
+
+.txt_criar {
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 33px;
+    bottom: 40px;
+    width: 29%;
 }
 
 .bt_login {
@@ -89,30 +105,37 @@ label {
     border-radius: 5px;
     width: 300px;
     height: 36px;
-    left: 25%;
-    bottom: 30px;
+    bottom: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bt_login:hover {
     background-color: #464545;
     border-radius: 5px;
+    border: 0.1px solid #ffffff;
 }
 
 .div_lembrar {
     position: relative;
-    height: 35px;
-    width: 250px;
-    bottom: 35px;
-    left: 26%;
-    text-align: left;
+    height: 6%;
+    width: 30%;
+    left: 15%;
+    bottom: 80px;
+}
+
+#remember_me {
+    position: relative;
+    left: 0px;
 }
 
 .div_esqueceu {
-    position: relative;
-    height: 35px;
-    width: 135px;
-    left: 54%;
-    bottom: 69px;
+    position: absolute;
+    height: 2.5%;
+    width: 26%;
+    left: 52%;
+    top: 68%;
 }
 
 .div_esqueceu1 {
@@ -122,33 +145,33 @@ label {
 .geral {
     position: relative;
     width: 520px;
-    height: 750px;
+    height: 550px;
     left: 55%;
     top: 0px;
 }
 
 .txt_bem {
     position: relative;
-    top: 0px;
     color: rgb(255, 255, 255);
     font-size: 26px;
-    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
     width: 25%;
+    bottom: 30px;
 }
 
 .txt_conta {
     position: relative;
     color: rgb(255, 255, 255);
-    left: 26%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 33px;
-    bottom: 20px;
+    bottom: 50px;
     width: 56%;
 }
 
 .logo {
-    position: relative;
-    top: 20px;
-    height: 120px;
-    width: 450px;
-    left: 14%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

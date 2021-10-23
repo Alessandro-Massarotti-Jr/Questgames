@@ -8,27 +8,30 @@
     <title>Teste</title>
 </head>
 <body>
-    <form method="POST" action="{{ route('register') }}">
+    <div class="geral"> 
+        <img class="logo" src="../img/logo.png" alt="">
+        <p class="txt_criar">Criar conta </p>
+     <form method="POST" action="{{ route('register') }}">
         @csrf
-
-        <div class="label">
-            <label for="name" value="{{ __('Name') }}">Nome</label>
-            <input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+       
+        <div class="div_cx_txt_email">
+            <label for="usuario" value="{{ __('usuario') }}">Nome</label>
+            <input id="usuario" class="cx_all" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
         </div>
 
-        <div class="label">
-            <label for="email" value="{{ __('Email') }}" >Email</label>
-            <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+        <div class="div_cx_txt_email">
+            <x-jet-label for="email" value="{{ __('Email') }}" />
+            <x-jet-input id="email" class="cx_all" type="email" name="email" :value="old('email')" required autofocus />
         </div>
 
-        <div class="label">
-            <label for="password" value="{{ __('Password') }}" >Senha</label>
-            <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+        <div class="div_cx_txt_email">
+            <x-jet-label for="password" value="{{ __('Senha') }}" />
+            <x-jet-input id="password" class="cx_all" type="password" name="password" required autocomplete="current-password" />
         </div>
 
-        <div class="label">
+        <div class="div_cx_txt_email">
             <label for="password_confirmation" value="{{ __('Confirm Password') }}" >Confirmar senha</label>
-            <input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <input id="password_confirmation" class="cx_all" type="password" name="password_confirmation" required autocomplete="new-password" />
         </div>
 
         @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -48,14 +51,10 @@
             </div>
         @endif
 
-        <div class="label">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <button class="btn">
-                {{ __('Register') }}
-            <button>
+        <div>          
+            <x-jet-button class="bt_login">
+                {{ __('cadastrar conta') }}
+            </x-jet-button>
         </div>
         <div class="background"></div>
 </body>

@@ -30,11 +30,11 @@
                 <x-jet-label for="password" value="{{ __('Senha') }}" />
                 <x-jet-input id="password" class="cx_all" type="password" name="password" required autocomplete="current-password" />
             </div>
-
+            <div class="div_">
             <div class="div_lembrar">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('lembrar usuario') }}</span>
+                    <span class="remember_me">{{ __('lembrar usuario') }}</span>
                 </label>
             </div>
 
@@ -48,6 +48,7 @@
                     <x-jet-button class="bt_login">
                         {{ __('Login') }}
                     </x-jet-button>
+                </div>
                 </div>
             </div>
         </form>
