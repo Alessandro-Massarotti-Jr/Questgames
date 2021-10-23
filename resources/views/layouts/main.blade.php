@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header style="display: fçex;">
+    <header style="display: flex;">
         {{-- dentro da sidebar --}}
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
