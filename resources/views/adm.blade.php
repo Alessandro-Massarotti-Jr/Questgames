@@ -35,7 +35,7 @@
 
     <div class="div_simuloja">
         <h1 id="h1_titulo">Titulo do jogo</h1>
-        <img src="/img/imgadm.png">
+        <img id="img_fundo2" src="/img/imgadm.png">
         <p id="p_preco3">R$00,00</p>
     </div>
 
@@ -69,18 +69,17 @@
             <p class="txt_format" style="top: 24%; left: 3%">Desenvolvedor:</p>
             <input type="text" id="inpt_txt_desenvol" class="inpt_txt" style="top: 41%; left: 3%">
             <p style="position: absolute; top: 54.5%; left: 3%; color: white">Fundo pag/loja:</p>
-        <input type="file" name="" id="file_img" class="file_img" style="top: 58.8%; left: 3%">
+        <input type="file" name="" id="file_img_fundo" class="file_img" style="top: 58.8%; left: 3%">
         <p style="position: absolute; top: 63.5%; left: 3%; color: white">Print 1:</p>
-        <input type="file" name="" id="file_img" class="file_img" style="top: 68%; left: 3%">
+        <input type="file" name="" id="file_img_print1" class="file_img" style="top: 68%; left: 3%">
         <p style="position: absolute; top: 73%; left: 3%; color: white">Print 2:</p>
-        <input type="file" name="" id="file_img" class="file_img" style="top: 77%; left: 3%">
+        <input type="file" name="" id="file_img_print2" class="file_img" style="top: 77%; left: 3%">
         <p style="position: absolute; top: 81.3%; left: 3%; color: white">Print 3:</p>
-        <input type="file" name="" id="file_img" class="file_img" style="top: 85.5%; left: 3%">
+        <input type="file" name="" id="file_img_print3" class="file_img" style="top: 85.5%; left: 3%">
         <button  id="bt_salvar">Salvar</button>
         <button id="bt_testar" onclick="escrever(this);">Testar</button>
         </div>
         </div>
-
     </div>
     <div class="div_rect_esquerda">
         <div class="div_all_bt">
@@ -130,17 +129,81 @@
   var nome = document.getElementById("inpt_txt_nome").value;
   var preco = document.getElementById("inpt_txt_preco").value;
   var desc = document.getElementById("inpt_txt_descr").value;
-  //var capa = document.getElementById("file_img").value;
 
-  
+
   document.getElementById('p_titulo').innerHTML = nome;
   document.getElementById('h1_titulo').innerHTML = nome;
   document.getElementById('p_preco3').innerHTML = preco;
   document.getElementById('p_preco2').innerHTML = preco;
   document.getElementById('p_desc2').innerHTML = desc;
-  //document.getElementById('file_img').value;
-}
 
-    </script>
+
+}
+//IMAGEM INPUT
+var uploadcapa = document.getElementById('file_img_fundo');
+var uploadprint1 = document.getElementById('file_img_print1');
+var uploadprint2 = document.getElementById('file_img_print2');
+var uploadprint3 = document.getElementById('file_img_print3');
+
+var imgcapa = document.getElementById('img_fundo');
+var imgcapa2 = document.getElementById('img_fundo2');
+var imgprint1 = document.getElementById('img_print1');
+var imgprint2 = document.getElementById('img_print2');
+var imgprint3 = document.getElementById('img_print3');
+
+uploadcapa.addEventListener('change', function(e) {
+    showThumbnail1(this.files);});
+    function showThumbnail1(files) {
+    if (files && files[0]) {
+        var reader1 = new FileReader();
+        var reader2 = new FileReader();
+    reader1.onload = function (e) {
+       imgcapa.src = e.target.result;
+    }
+    reader2.onload = function (e) {
+       imgcapa2.src = e.target.result;
+    }
+    reader1.readAsDataURL(files[0]);
+    reader2.readAsDataURL(files[0]);
+    }
+    }
+  
+    uploadprint1.addEventListener('change', function(e) {
+    showThumbnail2(this.files);});
+    function showThumbnail2(files) {
+    if (files && files[0]) {
+        var reader3 = new FileReader();
+    reader3.onload = function (e) {
+       imgprint1.src = e.target.result;
+    }
+    reader3.readAsDataURL(files[0]);
+    }
+    }
+
+    uploadprint2.addEventListener('change', function(e) {
+    showThumbnail3(this.files);});
+    function showThumbnail3(files) {
+    if (files && files[0]) {
+        var reader4 = new FileReader();
+    reader4.onload = function (e) {
+       imgprint2.src = e.target.result;
+    }
+    reader4.readAsDataURL(files[0]);
+    }
+    }
+
+    uploadprint3.addEventListener('change', function(e) {
+    showThumbnail4(this.files);});
+    function showThumbnail4(files) {
+    if (files && files[0]) {
+        var reader5 = new FileReader();
+    reader5.onload = function (e) {
+       imgprint3.src = e.target.result;
+    }
+    reader5.readAsDataURL(files[0]);
+    }
+    }
+
+</script>
 </body>
 </html>
