@@ -93,8 +93,8 @@
         $(".slider").owlCarousel({
             loop: true,
             margin:20,
-            autoplay: false,
-            autoplayTimeout: 2000, //1000 = 1 segundo
+            autoplay: true,
+            autoplayTimeout: 5000, //1000 = 1 segundo
             autoplayHoverPause: true,
             
         })
