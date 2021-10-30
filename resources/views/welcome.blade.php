@@ -49,7 +49,9 @@
 
 
 
+<div class="games">
 
+<h1 class="slidertitle">Titulo categoria destaque etc...</h1>
     <div class="slider owl-carousel" style="">
         <div class="card">
             <a href="/">
@@ -88,6 +90,7 @@
       </a>
   </div>
     </div>
+  </div>
 
     <script>
         $(".slider").owlCarousel({

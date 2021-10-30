@@ -126,6 +126,9 @@ footer p {
 
 /**************************card de jogo**************************/
 
+.slidertitle{
+  color:var(--cor-terciaria)
+}
 
 .slider{
   max-width: 2000px;
