@@ -58,8 +58,8 @@
         <img src="/img/QuestGames.png" alt="" class="logo">
 
     </header>
-    <div class="container-fluid">
-        <div id="main" class="row">
+    <div class="">
+        <div id="main" class="" style="">
             @yield('content')
         </div>
     </div>

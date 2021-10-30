@@ -179,7 +179,7 @@ text-decoration: none;
 /* ***************************slide***************************** */
 
 .slideshow{
-  width: 800px;
+  width: 100%;
   height: 500px;
   overflow: hidden;
   background-color: red;
@@ -201,16 +201,18 @@ text-decoration: none;
 }
 
 .slid img{
-  width: 800px;
+  width: 100%;
   height: 500px;
 }
 
 .navigation-manual{
   position: absolute;
-   width: 800px;
+   max-width: 100%;
    margin-top: -40px;
    display: flex;
    justify-content: center;
+   position: relative;
+
 }
 
 .manual-btn{
@@ -231,6 +233,7 @@ text-decoration: none;
 
 #radio1:checked ~ .first{
   margin-left: 0;
+  
 }
 #radio2:checked ~ .first{
   margin-left: -20%;
@@ -247,9 +250,10 @@ text-decoration: none;
 .navigation-auto{
   position: absolute;
   display: flex;
-  width: 800px;
+  max-width: 100%;
   justify-content: center;
   margin-top: 460px;
+ 
 }
 
 .navigation-auto div{
