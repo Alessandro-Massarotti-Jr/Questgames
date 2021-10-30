@@ -178,97 +178,100 @@ text-decoration: none;
 
 /* ***************************slide***************************** */
 
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.slideshow{
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  background-color: red;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+.slide{
+  width: 500%;
+  height: 500px;
+  display: flex;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+.slide input{
+  display:none;
+}
+
+.slid{
+  width: 20%;
+  transition: 2s;
+}
+
+.slid img{
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual{
+  position: absolute;
+   width: 800px;
+   margin-top: -40px;
+   display: flex;
+   justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid var(--cor-terciaria);
+  padding: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: 1s; 
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: var(--cor-terciaria);
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+
+
+.navigation-auto{
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.navigation-auto div{
+  border: 2px solid var(--cor-terciaria);
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+#radio1:checked ~ .navigation-auto .auto-btn1{
+   background: var(--cor-terciaria);
 }
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: var(--cor-terciaria);
 }
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: var(--cor-terciaria);
 }
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: var(--cor-terciaria);
 }
