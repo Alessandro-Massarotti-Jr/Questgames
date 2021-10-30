@@ -16,16 +16,24 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slid first">
+              <a href="">
                 <img src="/img/Test1.png" alt="">
+              </a>
             </div>
             <div class="slid">
+              <a href="">
                 <img src="/img/Test2.png" alt="">
+              </a>
             </div>
             <div class="slid">
+              <a href="">
                 <img src="/img/Test3.png" alt="">
+              </a>
             </div>
             <div class="slid">
+              <a href="">
                 <img src="/img/Test4.png" alt="">
+              </a>
             </div>
 
             <div class="navigation-auto">
