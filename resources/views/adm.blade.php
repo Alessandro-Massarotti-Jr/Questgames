@@ -14,8 +14,28 @@
         <img class="logo" src="img/logo.png" alt="">
     </div>
     <div class="div_rect_meio">
+        <p class="p_cadastro">Cadastro de Games</p>
+       
+        <div class="div_alterar">
+             <p class="p_alterar">Alterar Games</p>
+           <select name="ID" id="sel_alterar_id">
+               <option value="ID">ID</option></select>
+               <input type="text" id="inpt_alt_nome" class="inpt_alt"  placeholder="Nome">
+               <input type="text" id="inpt_alt_preco" class="inpt_alt"  placeholder="Preço">
+               <input type="text" id="inpt_alt_desc" class="inpt_alt"  placeholder="Descrição">
+               <input type="text" id="inpt_alt_desen" class="inpt_alt"  placeholder="Desenvolvedor">
+            
+               <button class="bt_alt_alterar">Alterar</button>
+            </div>
+        <div class="div_excluir">
+            <p class="p_excluir">Excluir Games</p>
+            <select name="ID" id="sel_alterar_id">
+                <option value="opt_nome">Nome</option></select>
+                <button class="bt_alt_alterar">Excluir</button>
+        </div>
+
 <!-- PARTE TELINHA SIMULAÇÃO   -->
-    <div class="div_simupag">
+    <div id="div_simupag">
        <div class="div_imgfundo">
         <img id="img_fundo" src="/img/imgadm.png">
         <p id="p_titulo">Titulo do jogo</p>
@@ -33,7 +53,7 @@
        </div>
     </div>
 
-    <div class="div_simuloja">
+    <div id="div_simuloja">
         <h1 id="h1_titulo">Titulo do jogo</h1>
         <img id="img_fundo2" src="/img/imgadm.png">
         <p id="p_preco3">R$00,00</p>
@@ -96,6 +116,8 @@
         //CONFIG_GLOBAL
         var gam = document.getElementById('tb_games');
         var cada = document.getElementById('div_cadastro_games');
+        var simupag = document.getElementById('div_simupag');
+        var simuloja = document.getElementById('div_simuloja');
         gam.style.visibility = 'hidden';
        // cada.style.visibility = 'hidden';
         
@@ -109,6 +131,8 @@
             } else {
                 gam.style.visibility = 'visible';
                 cada.style.visibility = 'hidden';
+                simupag.style.visibility = 'hidden';
+                simuloja.style.visibility = 'hidden';
                 let el = document.getElementById('bt_games');
             }
         }
@@ -118,9 +142,13 @@
                 let el = document.getElementById('bt_cadastrar');
                 cada.style.visibility = 'hidden';
                 gam.style.visibility = 'hidden';
+                simupag.style.visibility = 'hidden';
+                simuloja.style.visibility = 'hidden';
                 
             } else {
                 cada.style.visibility = 'visible';
+                simupag.style.visibility = 'visible';
+                simuloja.style.visibility = 'visible';
                 gam.style.visibility = 'hidden';
                 let el = document.getElementById('bt_cadastrar');
             }

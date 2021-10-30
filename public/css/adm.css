@@ -45,7 +45,7 @@
         .div_rect_meio {
             position: absolute;
             width: 78%;
-            height: 74vh;
+            height: 120vh;
             left: 20%;
             top: 0px;
             margin-top: 130px;
@@ -56,7 +56,7 @@
         .div_rect_esquerda {
             position: absolute;
             width: 18%;
-            height: 74vh;
+            height: 20vh;
             left: 1%;
             top: 0px;
             margin-top: 130px;
@@ -114,6 +114,7 @@
             height: 100%;
             left: 0px;
             top: 0px;
+            margin-top: 20px;
         }
         
         .inpt_txt,
@@ -141,7 +142,7 @@
         }
         /*parte simulação*/
         
-        .div_simupag {
+        #div_simupag {
             position: absolute;
             border: 1px solid white;
             width: 400px;
@@ -150,7 +151,7 @@
             top: 50px;
         }
         
-        .div_simuloja {
+        #div_simuloja {
             position: absolute;
             border: 1px solid white;
             width: 220px;
@@ -159,24 +160,24 @@
             top: 50px;
         }
         
-        .div_simuloja img {
+        #div_simuloja img {
             width: 100%;
             height: 87.5%;
             object-fit: cover;
             object-position: 20% 10%;
         }
         
-        .div_simuloja p {
+        #div_simuloja p {
             color: var(--cor-terciaria);
             text-align: center;
         }
         
-        .div_simuloja h1 {
+        #div_simuloja h1 {
             color: var(--cor-terciaria);
             text-align: center;
         }
         
-        .div_simuloja a {
+        #div_simuloja a {
             text-decoration: none;
             text-align: center;
         }
@@ -279,4 +280,55 @@
         
         #uploadfoto {
             position: absolute;
+        }
+        
+        .p_cadastro {
+            color: var(--cor-terciaria);
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .div_alterar {
+            position: absolute;
+            height: 100px;
+            top: 70%;
+            width: 100%;
+        }
+        
+        .p_alterar {
+            color: var(--cor-terciaria);
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .div_excluir {
+            position: absolute;
+            height: 100px;
+            top: 85.5%;
+            width: 100%;
+        }
+        
+        .p_excluir {
+            color: var(--cor-terciaria);
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        #sel_alterar_id {
+            position: relative;
+            z-index: 10;
+            height: 25px;
+            left: 5%;
+        }
+        
+        .inpt_alt {
+            position: relative;
+            left: 10%;
+        }
+        
+        .bt_alt_alterar {
+            position: relative;
+            left: 13%;
+            height: 25px;
+            width: 50px;
         }
