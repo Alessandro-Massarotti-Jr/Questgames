@@ -125,48 +125,51 @@ footer p {
 
 
 /**************************card de jogo**************************/
-.card-container{
+
+
+.slider{
+  max-width: 2000px;
  display: flex;
- flex-direction: row;
- justify-content: center;
+}
+
+.slider .card {
+ flex:1;
+ background-color: var(--cor-secundaria);
+  transition: .5s;
 
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 var(--cor-quaternaria);
-  width: 30%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  background-color: var(--cor-secundaria);
-  display: flex;
-  margin:5px;
-  transform: scale(0.8);
-  transition: transform .5s;
+.slider .card .img {
+ height: 200px;
+ width: 100%;
+ 
+ }
+ .slider .card .img img {
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ 
+ }
 
-}
-
-.price {
+ .slider .card .content{
+   padding: 10px 20px;
+ }
+.slider .card .content .price {
   color:var(--cor-terciaria);
   font-size: 22px;
+  text-align: center;
 }
-
-.card img{
-  width: 100%;;
-}
-
-.card p{
+.slider .card .content .title {
   color:var(--cor-terciaria);
+  text-align: center;
+
 }
 
-.card h1{
-  color:var(--cor-terciaria);
-}
 .card a{
 text-decoration: none;
 }
 .card:hover{
-  transform: scale(1.0);
+ background-color: var(--cor-retoques);
 }
 
 
