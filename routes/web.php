@@ -20,6 +20,15 @@ Route::get('/', function () {
 Route::get('/adm', function () {
     return view('adm');
 });
+Route::get('/game', function () {
+    return view('game');
+});
+Route::get('/biblioteca', function () {
+    return view('biblioteca');
+});
+Route::get('/compra', function () {
+    return view('compra');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

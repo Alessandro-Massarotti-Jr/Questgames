@@ -16,7 +16,7 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="/img/Floglin.png" style="width:100%">
+            <img src="/img/Flogin.png" style="width:100%">
             <div class="text">Caption Text</div>
         </div>
 
