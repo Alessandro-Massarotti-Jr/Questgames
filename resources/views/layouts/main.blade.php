@@ -58,11 +58,11 @@
         <img src="/img/QuestGames.png" alt="" class="logo">
 
     </header>
-    <div class="">
+ 
         <div id="main" class="" style="">
             @yield('content')
         </div>
-    </div>
+   
     <footer>
         <p>QuestGames &copy; 2021</p>
     </footer>
