@@ -2,24 +2,23 @@
 
 namespace App\Http\Controllers;
 use illuminate\Http\Request;
-use App\Models\games;
+use App\Models\Game;
 use Exception;
 
 class GameController extends Controller{
-    public function admsave(Request $request)
+    public function store(Request $request)
     {
-        $adm_save = $request->all();
-        try{
-            games::create([
-              'nome' => $adm_save['inpt_txt_nome'],
-              'preco' => $adm_save['inpt_txt_preco'],
-              'description' => $adm_save['inpt_txt_descr'],
-              'desenvolvedor' => $adm_save['inpt_txt_desenvol']
-            ]);
+                $game = new Game;
 
-            return redirect()->route("/");
-        }catch(Exception $error){
-            dd($error);
-        }
+                $game->nome = $request ->inpt_txt_nome;
+                $game->preco = $request->inpt_txt_preco;
+                $game->description = $request->inpt_txt_descr;
+                $game->desenvolvedor = $request->inpt_txt_desenvol;
+                $game->image = 'image';
+                $game->save();
+        
+
+            return redirect('/adm');
+        
     }
 }

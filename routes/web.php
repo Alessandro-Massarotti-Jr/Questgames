@@ -31,7 +31,7 @@ Route::get('/compra', function () {
     return view('compra');
 });
 
-Route::get('/adm/admsave',[GameController::class, 'admsave'] )->name('adm/admsave');
+Route::post('/adm/save',[GameController::class, 'store']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
