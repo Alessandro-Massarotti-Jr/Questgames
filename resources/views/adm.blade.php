@@ -80,7 +80,7 @@
                 <td>Alguem</td>
             </tr>
         </table>
-        <form action="/adm/save" method="POST">
+        <form action="/save" method="post">
             @csrf
             <div id="div_cadastro_games" class="div_cadastro_games">
                 <div class="div_txt">
@@ -105,6 +105,7 @@
                     <p style="position: absolute; top: 81.3%; left: 3%; color: white">Print 3:</p>
                     <input type="file" name="" id="file_img_print3" class="file_img" style="top: 85.5%; left: 3%">
                     <button type="submit" id="bt_salvar">Salvar</button>
+                    
         </form>
         <button id="bt_testar" onclick="escrever(this);">Testar</button>
     </div>

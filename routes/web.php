@@ -31,7 +31,7 @@ Route::get('/compra', function () {
     return view('compra');
 });
 
-Route::post('/adm/save',[GameController::class, 'store']);
+Route::post('/save', [GameController::class, 'store']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
