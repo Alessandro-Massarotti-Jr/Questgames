@@ -78,16 +78,18 @@
                 <td>Alguem</td>
             </tr>
         </table>
+        <form action="/adm/admsave" method="GET">
+            @csrf
         <div id="div_cadastro_games" class="div_cadastro_games">
             <div class="div_txt">
             <p class="txt_format"style="top: 0%; left: 3%">Nome:</p>
-            <input type="text" id="inpt_txt_nome" class="inpt_txt" style="top: 4%; left: 3%">
+            <input type="text" id="inpt_txt_nome" name="inpt_txt_nome" class="inpt_txt" style="top: 4%; left: 3%">
             <p class="txt_format" style="top: 8%; left: 3%">Preço:</p>
-            <input type="text" id="inpt_txt_preco" class="inpt_txt" style="top: 16.7%; left: 3%">
+            <input type="text" id="inpt_txt_preco" name="inpt_txt_preco" class="inpt_txt" style="top: 16.7%; left: 3%">
             <p class="txt_format" style="top: 16.6%; left: 3%">Descrição:</p>
-            <input type="text" id="inpt_txt_descr" class="inpt_txt" style="top: 29%; left: 3%">
+            <input type="text" id="inpt_txt_descr" name="inpt_txt_descr" class="inpt_txt" style="top: 29%; left: 3%">
             <p class="txt_format" style="top: 24%; left: 3%">Desenvolvedor:</p>
-            <input type="text" id="inpt_txt_desenvol" class="inpt_txt" style="top: 41%; left: 3%">
+            <input type="text" id="inpt_txt_desenvol" name="inpt_txt_desenvol" class="inpt_txt" style="top: 41%; left: 3%">
             <p style="position: absolute; top: 54.5%; left: 3%; color: white">Fundo pag/loja:</p>
         <input type="file" name="" id="file_img_fundo" class="file_img" style="top: 58.8%; left: 3%">
         <p style="position: absolute; top: 63.5%; left: 3%; color: white">Print 1:</p>
@@ -96,10 +98,12 @@
         <input type="file" name="" id="file_img_print2" class="file_img" style="top: 77%; left: 3%">
         <p style="position: absolute; top: 81.3%; left: 3%; color: white">Print 3:</p>
         <input type="file" name="" id="file_img_print3" class="file_img" style="top: 85.5%; left: 3%">
-        <button  id="bt_salvar">Salvar</button>
+        <button type="submit"  id="bt_salvar">Salvar</button>
+    </form>
         <button id="bt_testar" onclick="escrever(this);">Testar</button>
         </div>
         </div>
+    
     </div>
     <div class="div_rect_esquerda">
         <div class="div_all_bt">
