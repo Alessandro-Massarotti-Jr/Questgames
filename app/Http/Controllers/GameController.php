@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use illuminate\Http\Request;
-use App\Models\admSave;
+use App\Models\games;
 use Exception;
 
 class GameController extends Controller{
@@ -10,7 +10,7 @@ class GameController extends Controller{
     {
         $adm_save = $request->all();
         try{
-            admSave::create([
+            games::create([
               'nome' => $adm_save['inpt_txt_nome'],
               'preco' => $adm_save['inpt_txt_preco'],
               'description' => $adm_save['inpt_txt_descr'],
