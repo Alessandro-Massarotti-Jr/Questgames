@@ -10,271 +10,296 @@ att, Alessandro
 */
 
 
-
 /**************************Variaveis**************************/
-:root{
-  --cor-principal: #000000;
-  --cor-secundaria: #323232;
-  --cor-terciaria: #ffffff;
-  --cor-quaternaria: #212121;
-  --cor-retoques: #0c9e35;
+
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #323232;
+    --cor-terciaria: #ffffff;
+    --cor-quaternaria: #212121;
+    --cor-retoques: #0c9e35;
 }
+
 
 /**************************General**************************/
 
 * {
-  font-family: 'Roboto';
+    font-family: 'Roboto';
 }
 
 body {
-  min-height: 100vh;
-  padding-bottom: 100px;
-  position: relative;
-  background-color: var(--cor-principal);
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: var(--cor-principal);
 }
 
 header {
-  background-color: var(--cor-quaternaria);
- display: flex;
+    background-color: var(--cor-quaternaria);
+    display: flex;
 }
 
 footer {
-  text-align: center;
-  background-color: var(--cor-quaternaria);
-  color:var(--cor-terciaria);
-  padding: 30px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+    text-align: center;
+    background-color: var(--cor-quaternaria);
+    color: var(--cor-terciaria);
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .logo {
-  position: relative;
-  top: 20px;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px
- 
+    position: relative;
+    top: 5px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px
 }
 
 
 /**************************sidebar**************************/
 
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 250px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: var(--cor-secundaria);
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    height: 100%;
+    /* 100% Full-height */
+    width: 250px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: var(--cor-secundaria);
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
 }
+
 
 /* The navigation menu links */
-.openbtn{
-  color:var(--cor-terciaria);
+
+.openbtn {
+    color: var(--cor-terciaria);
 }
-.openbtn:hover{
-  color:var(--cor-retoques);
+
+.openbtn:hover {
+    color: var(--cor-retoques);
 }
+
 .sidenav a {
-  text-decoration: none;
-  font-size: 25px;
-  color: var(--cor-terciaria);
-  display: block;
-  transition: 0.3s;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--cor-terciaria);
+    display: block;
+    transition: 0.3s;
 }
+
 
 /* When you mouse over the navigation links, change their color */
+
 .sidenav a:hover {
-  color: var(--cor-retoques);
+    color: var(--cor-retoques);
 }
+
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  font-size: 36px;
-  color: var(--cor-terciaria);
-}
-.sidenav .closebtn:hover {
 
-  color: var(--cor-retoques);
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+    color: var(--cor-terciaria);
 }
+
+.sidenav .closebtn:hover {
+    color: var(--cor-retoques);
+}
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
-  transition: margin-left .5s;
-  margin-left: 250px;
+    transition: margin-left .5s;
+    margin-left: 250px;
 }
 
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 
 /**************************card de jogo**************************/
 
-.slidertitle{
-  color:var(--cor-terciaria)
+.slidertitle {
+    color: var(--cor-terciaria)
 }
 
-.slider{
-  max-width: 2000px;
- display: flex;
+.slider {
+    max-width: 2000px;
+    display: flex;
 }
 
 .slider .card {
- flex:1;
- background-color: var(--cor-secundaria);
-  transition: .5s;
-
+    flex: 1;
+    background-color: var(--cor-secundaria);
+    transition: .5s;
 }
 
 .slider .card .img {
- height: 200px;
- width: 100%;
- 
- }
- .slider .card .img img {
- height: 100%;
- width: 100%;
- object-fit: cover;
- 
- }
+    height: 200px;
+    width: 100%;
+}
 
- .slider .card .content{
-   padding: 10px 20px;
- }
+.slider .card .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider .card .content {
+    padding: 10px 20px;
+}
+
 .slider .card .content .price {
-  color:var(--cor-terciaria);
-  font-size: 22px;
-  text-align: center;
+    color: var(--cor-terciaria);
+    font-size: 22px;
+    text-align: center;
 }
+
 .slider .card .content .title {
-  color:var(--cor-terciaria);
-  text-align: center;
-
+    color: var(--cor-terciaria);
+    text-align: center;
 }
 
-.card a{
-text-decoration: none;
+.card a {
+    text-decoration: none;
 }
-.card:hover{
- background-color: var(--cor-retoques);
+
+.card:hover {
+    background-color: var(--cor-retoques);
 }
 
 
 /* ***************************slide***************************** */
 
-.slideshow{
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  background-color: red;
+.slideshow {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: red;
 }
 
-.slide{
-  width: 500%;
-  height: 500px;
-  display: flex;
+.slide {
+    width: 500%;
+    height: 500px;
+    display: flex;
 }
 
-.slide input{
-  display:none;
+.slide input {
+    display: none;
 }
 
-.slid{
-  width: 20%;
-  transition: 2s;
+.slid {
+    width: 20%;
+    transition: 2s;
 }
 
-.slid img{
-  width: 100%;
-  height: 500px;
+.slid img {
+    width: 100%;
+    height: 500px;
 }
 
-.navigation-manual{
-  position: absolute;
-   max-width: 100%;
-   margin-top: -40px;
-   display: flex;
-   justify-content: center;
-   position: relative;
-
+.navigation-manual {
+    position: absolute;
+    max-width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
-.manual-btn{
-  border: 2px solid var(--cor-terciaria);
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s; 
+.manual-btn {
+    border: 2px solid var(--cor-terciaria);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
 }
 
-.manual-btn:not(:last-child){
-  margin-right: 40px;
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
 }
 
-.manual-btn:hover{
-  background: var(--cor-terciaria);
+.manual-btn:hover {
+    background: var(--cor-terciaria);
 }
 
-#radio1:checked ~ .first{
-  margin-left: 0;
-  
-}
-#radio2:checked ~ .first{
-  margin-left: -20%;
-}
-#radio3:checked ~ .first{
-  margin-left: -40%;
-}
-#radio4:checked ~ .first{
-  margin-left: -60%;
+#radio1:checked~.first {
+    margin-left: 0;
 }
 
-
-
-.navigation-auto{
-  position: absolute;
-  display: flex;
-  max-width: 100%;
-  justify-content: center;
-  margin-top: 460px;
- 
+#radio2:checked~.first {
+    margin-left: -20%;
 }
 
-.navigation-auto div{
-  border: 2px solid var(--cor-terciaria);
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
+#radio3:checked~.first {
+    margin-left: -40%;
 }
 
-.navigation-auto div:not(:last-child){
-  margin-right: 40px;
+#radio4:checked~.first {
+    margin-left: -60%;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-   background: var(--cor-terciaria);
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 460px;
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
-  background: var(--cor-terciaria);
+
+.navigation-auto div {
+    border: 2px solid var(--cor-terciaria);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
 }
-#radio3:checked ~ .navigation-auto .auto-btn3{
-  background: var(--cor-terciaria);
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
 }
-#radio4:checked ~ .navigation-auto .auto-btn4{
-  background: var(--cor-terciaria);
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: var(--cor-terciaria);
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: var(--cor-terciaria);
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: var(--cor-terciaria);
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: var(--cor-terciaria);
 }
