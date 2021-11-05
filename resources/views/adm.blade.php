@@ -14,7 +14,7 @@
         <img class="logo" src="img/logo.png" alt="">
     </div>
     <div class="div_rect_meio">
-        <p class="p_cadastro">Cadastro de Games</p>
+        <p id="p_cadastro">Cadastro de Games</p>
 
         <div id="div_alterar">
             <p class="p_alterar">Alterar Games</p>
@@ -80,13 +80,12 @@
                 <td>Alguem</td>
             </tr>
         </table>
-        <form action="/save" method="post">
+        <form action="{{route('adm/store')}}" method="post">
             @csrf
             <div id="div_cadastro_games" class="div_cadastro_games">
                 <div class="div_txt">
                     <p class="txt_format txt_nome">Nome:</p>
                     <input type="text" id="inpt_txt_nome" name="inpt_txt_nome" class="inpt_txt inpt_txt_nome">
-                        
                     <p class="txt_format txt_preco">Preço:</p>
                     <input type="text" id="inpt_txt_preco" name="inpt_txt_preco" class="inpt_txt inpt_txt_preco">
                     <p class="txt_format txt_descr">Descrição:</p>
@@ -94,7 +93,7 @@
                     <p class="txt_format txt_desenvol">Desenvolvedor:</p>
                     <input type="text" id="inpt_txt_desenvol" name="inpt_txt_desenvol" class="inpt_txt inpt_txt_desenvol">
                     <p class="txt_fundopag">Fundo pag/loja:</p>
-                    <input type="file" name="" id="file_img_fundo" class="file_img file_img_fundo">
+                    <input type="file" name="file_img_fundo" id="file_img_fundo" class="file_img file_img_fundo">
                     <p class="txt_print1">Print 1:</p>
                     <input type="file" name="" id="file_img_print1" class="file_img file_img_print1">
                     <p class="txt_print2">Print 2:</p>
@@ -129,6 +128,7 @@
         var simuloja = document.getElementById('div_simuloja');
         var excluir = document.getElementById('div_excluir');
         var alterar = document.getElementById('div_alterar');
+        var cadastro = document.getElementById('p_cadastro');
         gam.style.visibility = 'hidden';
         // cada.style.visibility = 'hidden';
 
@@ -146,6 +146,7 @@
                 simuloja.style.visibility = 'hidden';
                 excluir.style.visibility = 'hidden';
                 alterar.style.visibility = 'hidden';
+                cadastro.style.visibility = 'hidden';
                
                 let el = document.getElementById('bt_games');
             }
@@ -160,6 +161,7 @@
                 simuloja.style.visibility = 'hidden';
                 excluir.style.visibility = 'hidden';
                 alterar.style.visibility = 'hidden';
+                cadastro.style.visibility = 'hidden';
 
             } else {
                 cada.style.visibility = 'visible';
@@ -167,6 +169,7 @@
                 simuloja.style.visibility = 'visible';
                 excluir.style.visibility = 'visible';
                 alterar.style.visibility = 'visible';
+                cadastro.style.visibility = 'visible';
                
                 gam.style.visibility = 'hidden';
                 let el = document.getElementById('bt_cadastrar');

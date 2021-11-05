@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +30,7 @@ Route::get('/compra', function () {
     return view('compra');
 });
 
-Route::post('/save', [GameController::class, 'store']);
+Route::post('/adm/store',[GameController::class, 'store'] )->name('adm/store');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

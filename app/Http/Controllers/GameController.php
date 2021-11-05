@@ -1,24 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
-use illuminate\Http\Request;
-use App\Models\Game;
+
+use App\Models\Games;
 use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class GameController extends Controller{
+class GameController extends Controller
+{
+   
 
-    public function store(Request $request){
-                $game = new Game;
+    public function store(Request $request)
+    {
+        $game = $request->all();
+        try{
+            Games::create([
+              'nome' => $game['inpt_txt_nome'],
+              'preco' => $game['inpt_txt_preco'],
+              'description' => $game['inpt_txt_descr'],
+              'desenvolvedor' => $game['inpt_txt_desenvol'],
+              'image' => $game['file_img_fundo']
+            ]);
 
-                $game->nome = $request -> inpt_txt_nome;
-                $game->preco = $request-> inpt_txt_preco;
-                $game->description = $request-> inpt_txt_descr;
-                $game->desenvolvedor = $request-> inpt_txt_desenvol;
-                $game->image = 'image';
-                $game->save();
-        
-
-            return redirect('/adm');     
+            return redirect('adm')->with('message', 'Game cadastrado com sucesso');
+        }catch(Exception $error){
+            dd($error);
+        }
     }
-
 }

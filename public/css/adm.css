@@ -288,7 +288,7 @@ td {
     position: absolute;
 }
 
-.p_cadastro {
+#p_cadastro {
     color: var(--cor-terciaria);
     text-align: center;
     font-size: 25px;
