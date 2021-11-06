@@ -15,6 +15,7 @@ class Games extends Model
         'preco',
         'description',
         'desenvolvedor',
+        'category',
         'image'
     ];
 }

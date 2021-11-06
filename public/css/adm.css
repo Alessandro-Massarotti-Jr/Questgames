@@ -377,11 +377,21 @@ td {
     left: 3%
 }
 
+.txt_category{
+    top:31%;
+    left:3%
+}
+
+.inpt_select_category{
+    margin-left: 2%;
+    margin-top: 71%;
+}
+
 .txt_fundo_pag {
     position: absolute;
     top: 54.5%;
     left: 3%;
-    color: white"
+    color: white;
 
 }
 

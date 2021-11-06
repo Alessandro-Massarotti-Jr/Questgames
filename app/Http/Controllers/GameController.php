@@ -25,10 +25,12 @@ class GameController extends Controller
               'preco' => $game['inpt_txt_preco'],
               'description' => $game['inpt_txt_descr'],
               'desenvolvedor' => $game['inpt_txt_desenvol'],
+              'category' =>$game['inpt_select_category'],
               'image' => $game['file_img_fundo']
             ]);
 
             return redirect('adm')->with('message', 'Game cadastrado com sucesso');
+
         }catch(Exception $error){
             dd($error);
         }

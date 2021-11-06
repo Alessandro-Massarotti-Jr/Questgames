@@ -20,6 +20,7 @@ class CreateGamesTable extends Migration
             $table->double("preco");
             $table->text("description");
             $table->string("desenvolvedor");
+            $table->string("category");
             $table->string("image");
         });
     }

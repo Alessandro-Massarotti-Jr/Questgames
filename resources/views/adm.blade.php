@@ -104,7 +104,14 @@
                     <input type="text" id="inpt_txt_descr" name="inpt_txt_descr" class="inpt_txt inpt_txt_descr">
                     <p class="txt_format txt_desenvol">Desenvolvedor:</p>
                     <input type="text" id="inpt_txt_desenvol" name="inpt_txt_desenvol" class="inpt_txt inpt_txt_desenvol">
-                    <p class="txt_fundopag">Fundo pag/loja:</p>
+                    <p class="txt_format txt_category">Categoria:</p>
+                    <select class="inpt_select_category" name="inpt_select_category" id="inpt_select_category">
+                        <option value="Aventura">Aventura</option>
+                        <option value="Ação">Ação</option>
+                        <option value="Mistério">Mistério</option>
+                        <option value="Puzzle">Puzzle</option>
+                    </select>
+                    <p class="txt_fundo_pag">Fundo pag/loja:</p>
                     <input type="file" name="file_img_fundo" id="file_img_fundo" class="file_img file_img_fundo">
                     <p class="txt_print1">Print 1:</p>
                     <input type="file" name="" id="file_img_print1" class="file_img file_img_print1">
