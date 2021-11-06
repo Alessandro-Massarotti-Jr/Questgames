@@ -13,25 +13,40 @@ class GameController extends Controller
     public function index()
     {
         $game = Games::all();
-        return view('adm',['todosjogos' => $game]);
+        return view('adm', ['todosjogos' => $game]);
     }
 
     public function store(Request $request)
     {
-        $game = $request->all();
-        try{
-            Games::create([
-              'nome' => $game['inpt_txt_nome'],
-              'preco' => $game['inpt_txt_preco'],
-              'description' => $game['inpt_txt_descr'],
-              'desenvolvedor' => $game['inpt_txt_desenvol'],
-              'category' =>$game['inpt_select_category'],
-              'image' => $game['file_img_fundo']
-            ]);
+        $game = new Games;
+        try {
+            $game->nome = $request->inpt_txt_nome;
+            $game->preco = $request->inpt_txt_preco;
+            $game->description = $request->inpt_txt_descr;
+            $game->desenvolvedor = $request->inpt_txt_desenvol;
+            $game->category = $request->inpt_select_category;
+            // Image Upload
+            
+        if($request->hasFile('file_img_fundo') && $request->file('file_img_fundo')->isValid()) {
+
+            $requestImage = $request->file_img_fundo;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/games'), $imageName);
+
+            $game->image = $imageName;
+
+        }
+
+            $game->save();
+
 
             return redirect('adm')->with('message', 'Game cadastrado com sucesso');
-
-        }catch(Exception $error){
+            
+        } catch (Exception $error) {
             dd($error);
         }
     }
@@ -41,5 +56,5 @@ class GameController extends Controller
         $game = Games::where('nome', $nome);
         $game->delete();
         return redirect('adm')->with('message', 'Game apagado com sucesso!');
-}
+    }
 }

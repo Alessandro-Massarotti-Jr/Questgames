@@ -92,7 +92,7 @@
             @endforeach
         </table>
         
-        <form action="{{route('adm/store')}}" method="post">
+        <form action="{{route('adm/store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div id="div_cadastro_games" class="div_cadastro_games">
                 <div class="div_txt">
