@@ -28,9 +28,10 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </a>
             <a href="/">Loja</a>
-            <a href="/">Carrinho</a>
+            <a href="/">Carrinho (Alfa)</a>
             <a href="/">Categorias</a>
-            <a href="/">comunidade</a>
+            <a href="/">Biblioteca</a>
+            <a href="/">Configurações</a>
             @guest
                 <a href="/login">Login</a>
                 <a href="/register">cadastro</a>

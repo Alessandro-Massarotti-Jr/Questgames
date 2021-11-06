@@ -12,7 +12,7 @@
 
 
     <div class="line1">
-        <h1 class="gamename">pagina do Jogo</h1>
+        <h1 class="gamename">The last human</h1>
 
         <a href="" class="btncompra">Comprar R$ 15,00</a>
     </div>
@@ -20,9 +20,9 @@
 
     <div class="line2">
         <div class="gamedescription">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est nisl, commodo eget scelerisque non, luctus et dolor. In aliquam est id orci hendrerit, imperdiet interdum lacus varius. Etiam in pulvinar purus, sit amet vestibulum ligula. Quisque gravida mattis aliquet. Sed blandit lacus erat, at scelerisque orci faucibus nec. Nulla vitae est eget justo dapibus efficitur vitae vitae dui. Cras cursus quam ut euismod rutrum. Nam nec sem tellus. Ut aliquam ipsum orci, ac imperdiet mi accumsan nec. Pellentesque in urna in felis porttitor maximus. In enim dolor, sagittis at commodo eget, euismod a sapien. Nunc aliquet vestibulum est, ac luctus lacus imperdiet sed. Vivamus vel congue neque.</p>
+            <p> The last human- é uma ação-aventura 2D de estilo retro, com uma perspectiva side-scroller como Castlevania, Shinobi, etc, com elementos de RPG de jogos como; Final Fantasy, Secret of Mana e muitos outros grandes títulos, combinando o antigo estilo de jogo com a nova mecânica.</p>
         </div>
-        <div class="gameimages">
+        <div class="gameimages">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est nisl,
             <img src="/img/Test1.png" alt="">
             <img src="/img/Test2.png" alt="">
             <img src="/img/Test3.png" alt="">
