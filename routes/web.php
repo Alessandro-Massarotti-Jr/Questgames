@@ -36,3 +36,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::group(['middleware' => ['web']], function(){
+    Route::resource('adm', GameController::class);
+});

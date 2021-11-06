@@ -6,10 +6,15 @@ use App\Models\Games;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Post;
 
 class GameController extends Controller
 {
-   
+    public function index()
+    {
+        $game = Games::all();
+        return view('adm',['todosjogos' => $game]);
+    }
 
     public function store(Request $request)
     {
@@ -28,4 +33,11 @@ class GameController extends Controller
             dd($error);
         }
     }
+
+    public function destroy($nome)
+    {
+        $game = Games::where('nome', $nome);
+        $game->delete();
+        return redirect('adm')->with('message', 'Game apagado com sucesso!');
+}
 }

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADM</title>
     <link rel="stylesheet" href="css/adm.css">
+    
+
 </head>
 
 <body>
@@ -28,12 +30,19 @@
 
             <button class="bt_alt_alterar">Alterar</button>
         </div>
+        
         <div id="div_excluir">
             <p class="p_excluir">Excluir Games</p>
-            <select name="ID" id="sel_alterar_id">
-                <option value="opt_nome">Nome</option>
-            </select>
-            <button class="bt_alt_alterar">Excluir</button>
+            @foreach($todosjogos as $game)
+            <form action="/adm/{{ $game->nome }}" method="POST">
+                <select name="ID" id="sel_alterar_id">
+                    <option value="opt_nome">{{ $game -> nome }}</option>
+                    @endforeach
+                </select>
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" name="nome" class="bt_alt_alterar" value="Excluir">
+            </form>
         </div>
 
         <!-- PARTE TELINHA SIMULAÇÃO   -->
@@ -72,14 +81,17 @@
                 <th>Descrição</th>
                 <th>Desenvolvedor</th>
             </tr>
+            @foreach($todosjogos as $game)
             <tr>
-                <td>-1</td>
-                <td>Teste</td>
-                <td>-200,00</td>
-                <td>gge retsae</td>
-                <td>Alguem</td>
+                <td>{{ $game -> id }}</td>
+                <td>{{ $game -> nome }}</td>
+                <td>{{ $game -> preco }}</td>
+                <td>{{ $game -> description }}</td>
+                <td>{{ $game -> desenvolvedor }}</td>
             </tr>
+            @endforeach
         </table>
+        
         <form action="{{route('adm/store')}}" method="post">
             @csrf
             <div id="div_cadastro_games" class="div_cadastro_games">
