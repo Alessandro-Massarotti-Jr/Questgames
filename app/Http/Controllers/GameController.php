@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Games;
+use App\Models\Category;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +14,8 @@ class GameController extends Controller
     public function index()
     {
         $game = Games::all();
-        return view('adm', ['todosjogos' => $game]);
+        $category = Category::all();
+        return view('adm', ['todosjogos' => $game, 'categorias' =>$category ]);
     }
 
     public function store(Request $request)
