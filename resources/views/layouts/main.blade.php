@@ -56,7 +56,7 @@
             <ion-icon name="menu-outline"></ion-icon>
         </h1>
 
-        <img src="/img/QuestGames.png" alt="" class="logo">
+        <img src="/img/logo.png" alt="" class="logo">
 
     </header>
  

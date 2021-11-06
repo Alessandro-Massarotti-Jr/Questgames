@@ -16,24 +16,24 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slid first">
-              <a href="">
-                <img src="/img/Test1.png" alt="">
-              </a>
+                <a href="">
+                    <img src="/img/Test1.png" alt="">
+                </a>
             </div>
             <div class="slid">
-              <a href="">
-                <img src="/img/Test2.png" alt="">
-              </a>
+                <a href="">
+                    <img src="/img/Test2.png" alt="">
+                </a>
             </div>
             <div class="slid">
-              <a href="">
-                <img src="/img/Test3.png" alt="">
-              </a>
+                <a href="">
+                    <img src="/img/Test3.png" alt="">
+                </a>
             </div>
             <div class="slid">
-              <a href="">
-                <img src="/img/Test4.png" alt="">
-              </a>
+                <a href="">
+                    <img src="/img/Test4.png" alt="">
+                </a>
             </div>
 
             <div class="navigation-auto">
@@ -69,50 +69,26 @@
 
 
 
-
+@foreach ($categorias as $categoria)
     <div class="games">
-
-        <h1 class="slidertitle">Titulo categoria destaque etc...</h1>
+        <h1 class="slidertitle">{{$categoria->category_name}}</h1>
         <div class="slider owl-carousel" style="">
+            @foreach ($games as $game)
+            @if($game->category == $categoria->category_name)
             <div class="card">
-                <a href="/">
-                    <img class="img" src="/img/Test1.png" alt="Denim Jeans">
+                <a href="/game/{{ $game->id }}">
+                    <img class="img" src="/img/games/{{$game->image}}" alt="{{$game->nome}}">
                     <div class="content">
-                        <h1 class="title">Titulo do jogo</h1>
-                        <p class="price">R$00,00</p>
+                        <h1 class="title">{{$game->nome}}</h1>
+                        <p class="price">R${{$game->preco}},00</p>
                     </div>
                 </a>
             </div>
-            <div class="card">
-                <a href="/">
-                    <img class="img" src="/img/Test2.png" alt="Denim Jeans">
-                    <div class="content">
-                        <h1 class="title">Titulo do jogo2</h1>
-                        <p class="price">R$00,00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/">
-                    <img class="img" src="/img/Test3.png" alt="Denim Jeans">
-                    <div class="content">
-                        <h1 class="title">Titulo do jogo3</h1>
-                        <p class="price">R$00,00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/">
-                    <img class="img" src="/img/Test4.png" alt="Denim Jeans">
-                    <div class="content">
-                        <h1 class="title">Titulo do jogo4</h1>
-                        <p class="price">R$00,00</p>
-                    </div>
-                </a>
-            </div>
+            @endif
+            @endforeach
         </div>
     </div>
-
+@endforeach
     <script>
         $(".slider").owlCarousel({
             loop: true,
@@ -120,6 +96,20 @@
             autoplay: true,
             autoplayTimeout: 5000, //1000 = 1 segundo
             autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    slideBy:1
+                },
+                600: {
+                    items: 2,
+                    slideBy:2
+                },
+                1000: {
+                    items: 3,
+                    slideBy:3
+                }
+            }
 
         })
     </script>

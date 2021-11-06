@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADM</title>
     <link rel="stylesheet" href="css/adm.css">
+    
+
 </head>
 
 <body>
@@ -14,9 +16,9 @@
         <img class="logo" src="img/logo.png" alt="">
     </div>
     <div class="div_rect_meio">
-        <p class="p_cadastro">Cadastro de Games</p>
+        <p id="p_cadastro">Cadastro de Games</p>
 
-        <div class="div_alterar">
+        <div id="div_alterar">
             <p class="p_alterar">Alterar Games</p>
             <select name="ID" id="sel_alterar_id">
                 <option value="ID">ID</option>
@@ -28,12 +30,19 @@
 
             <button class="bt_alt_alterar">Alterar</button>
         </div>
-        <div class="div_excluir">
+        
+        <div id="div_excluir">
             <p class="p_excluir">Excluir Games</p>
-            <select name="ID" id="sel_alterar_id">
-                <option value="opt_nome">Nome</option>
-            </select>
-            <button class="bt_alt_alterar">Excluir</button>
+            @foreach($todosjogos as $game)
+            <form action="/adm/{{ $game->nome }}" method="POST">
+                <select name="ID" id="sel_alterar_id">
+                    <option value="opt_nome">{{ $game -> nome }}</option>
+                    @endforeach
+                </select>
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="submit" name="nome" class="bt_alt_alterar" value="Excluir">
+            </form>
         </div>
 
         <!-- PARTE TELINHA SIMULAÇÃO   -->
@@ -72,42 +81,48 @@
                 <th>Descrição</th>
                 <th>Desenvolvedor</th>
             </tr>
+            @foreach($todosjogos as $game)
             <tr>
-                <td>-1</td>
-                <td>Teste</td>
-                <td>-200,00</td>
-                <td>gge retsae</td>
-                <td>Alguem</td>
+                <td>{{ $game -> id }}</td>
+                <td>{{ $game -> nome }}</td>
+                <td>{{ $game -> preco }}</td>
+                <td>{{ $game -> description }}</td>
+                <td>{{ $game -> desenvolvedor }}</td>
             </tr>
+            @endforeach
         </table>
-        <form action="/save" method="post">
+        
+        <form action="{{route('adm/store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div id="div_cadastro_games" class="div_cadastro_games">
                 <div class="div_txt">
-                    <p class="txt_format" style="top: 0%; left: 3%">Nome:</p>
-                    <input type="text" id="inpt_txt_nome" name="inpt_txt_nome" class="inpt_txt"
-                        style="top: 4%; left: 3%">
-                    <p class="txt_format" style="top: 8%; left: 3%">Preço:</p>
-                    <input type="text" id="inpt_txt_preco" name="inpt_txt_preco" class="inpt_txt"
-                        style="top: 16.7%; left: 3%">
-                    <p class="txt_format" style="top: 16.6%; left: 3%">Descrição:</p>
-                    <input type="text" id="inpt_txt_descr" name="inpt_txt_descr" class="inpt_txt"
-                        style="top: 29%; left: 3%">
-                    <p class="txt_format" style="top: 24%; left: 3%">Desenvolvedor:</p>
-                    <input type="text" id="inpt_txt_desenvol" name="inpt_txt_desenvol" class="inpt_txt"
-                        style="top: 41%; left: 3%">
-                    <p style="position: absolute; top: 54.5%; left: 3%; color: white">Fundo pag/loja:</p>
-                    <input type="file" name="" id="file_img_fundo" class="file_img" style="top: 58.8%; left: 3%">
-                    <p style="position: absolute; top: 63.5%; left: 3%; color: white">Print 1:</p>
-                    <input type="file" name="" id="file_img_print1" class="file_img" style="top: 68%; left: 3%">
-                    <p style="position: absolute; top: 73%; left: 3%; color: white">Print 2:</p>
-                    <input type="file" name="" id="file_img_print2" class="file_img" style="top: 77%; left: 3%">
-                    <p style="position: absolute; top: 81.3%; left: 3%; color: white">Print 3:</p>
-                    <input type="file" name="" id="file_img_print3" class="file_img" style="top: 85.5%; left: 3%">
+                    <p class="txt_format txt_nome">Nome:</p>
+                    <input type="text" id="inpt_txt_nome" name="inpt_txt_nome" class="inpt_txt inpt_txt_nome">
+                    <p class="txt_format txt_preco">Preço:</p>
+                    <input type="text" id="inpt_txt_preco" name="inpt_txt_preco" class="inpt_txt inpt_txt_preco">
+                    <p class="txt_format txt_descr">Descrição:</p>
+                    <input type="text" id="inpt_txt_descr" name="inpt_txt_descr" class="inpt_txt inpt_txt_descr">
+                    <p class="txt_format txt_desenvol">Desenvolvedor:</p>
+                    <input type="text" id="inpt_txt_desenvol" name="inpt_txt_desenvol" class="inpt_txt inpt_txt_desenvol">
+                    <p class="txt_format txt_category">Categoria:</p>
+                    <select class="inpt_select_category" name="inpt_select_category" id="inpt_select_category">
+                        @foreach($categorias as $categoria)
+                            <option value="{{$categoria->category_name}}">{{$categoria->category_name}}</option>
+                        @endforeach
+                    </select>
+                    <p class="txt_fundo_pag">Fundo pag/loja:</p>
+                    <input type="file" name="file_img_fundo" id="file_img_fundo" class="file_img file_img_fundo">
+                    <p class="txt_print1">Print 1:</p>
+                    <input type="file" name="" id="file_img_print1" class="file_img file_img_print1">
+                    <p class="txt_print2">Print 2:</p>
+                    <input type="file" name="" id="file_img_print2" class="file_img file_img_print2">
+                    <p class="txt_print3">Print 3:</p>
+                    <input type="file" name="" id="file_img_print3" class="file_img file_img_print3">
                     <button type="submit" id="bt_salvar">Salvar</button>
                     
         </form>
-        <button id="bt_testar" onclick="escrever(this);">Testar</button>
+        <input type="button" value="Testar" id="bt_testar" onclick="escrever(this);">
+       
     </div>
     </div>
 
@@ -116,8 +131,7 @@
         <div class="div_all_bt">
             <p class="txt_all">Configurações</p>
             <div class="div_table_bt">
-                <button class="bt_all" id="bt_games" onclick="MostrarTabela()" style="top: 50px">> Games <<
-                        /button>
+                <button class="bt_all" id="bt_games" onclick="MostrarTabela()" style="top: 50px">> Games <</button>
             </div>
             <div class="div_bt_cadastrar">
                 <button class="bt_all" id="bt_cadastrar" onclick="Cadastrar()" style="top: 90px">CRUD</button>
@@ -130,6 +144,9 @@
         var cada = document.getElementById('div_cadastro_games');
         var simupag = document.getElementById('div_simupag');
         var simuloja = document.getElementById('div_simuloja');
+        var excluir = document.getElementById('div_excluir');
+        var alterar = document.getElementById('div_alterar');
+        var cadastro = document.getElementById('p_cadastro');
         gam.style.visibility = 'hidden';
         // cada.style.visibility = 'hidden';
 
@@ -145,6 +162,10 @@
                 cada.style.visibility = 'hidden';
                 simupag.style.visibility = 'hidden';
                 simuloja.style.visibility = 'hidden';
+                excluir.style.visibility = 'hidden';
+                alterar.style.visibility = 'hidden';
+                cadastro.style.visibility = 'hidden';
+               
                 let el = document.getElementById('bt_games');
             }
         }
@@ -156,11 +177,18 @@
                 gam.style.visibility = 'hidden';
                 simupag.style.visibility = 'hidden';
                 simuloja.style.visibility = 'hidden';
+                excluir.style.visibility = 'hidden';
+                alterar.style.visibility = 'hidden';
+                cadastro.style.visibility = 'hidden';
 
             } else {
                 cada.style.visibility = 'visible';
                 simupag.style.visibility = 'visible';
                 simuloja.style.visibility = 'visible';
+                excluir.style.visibility = 'visible';
+                alterar.style.visibility = 'visible';
+                cadastro.style.visibility = 'visible';
+               
                 gam.style.visibility = 'hidden';
                 let el = document.getElementById('bt_cadastrar');
             }

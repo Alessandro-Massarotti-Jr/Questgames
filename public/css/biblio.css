@@ -1,0 +1,16 @@
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #323232;
+    --cor-terciaria: #ffffff;
+    --cor-retoques: #0c9e35;
+    --cor-retangulos: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(9, 32%, 4%) 100%);
+}
+
+.div_rect_cima {
+    position: absolute;
+    width: 100%;
+    height: 71px;
+    left: 0px;
+    top: 0px;
+    background: var(--cor-retangulos);
+}
