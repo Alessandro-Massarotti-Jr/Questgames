@@ -67,4 +67,12 @@ class GameController extends Controller
         return view('welcome', ['games' => $games, 'categorias' =>$cats ]);
     }
 
+    public function show($id) {
+
+        $game = Games::findOrFail($id);
+
+        return view('game', ['game' => $game]);
+        
+    }
+
 }

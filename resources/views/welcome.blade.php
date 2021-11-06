@@ -76,7 +76,7 @@
             @foreach ($games as $game)
             @if($game->category == $categoria->category_name)
             <div class="card">
-                <a href="/">
+                <a href="/game/{{ $game->id }}">
                     <img class="img" src="/img/games/{{$game->image}}" alt="{{$game->nome}}">
                     <div class="content">
                         <h1 class="title">{{$game->nome}}</h1>
@@ -98,14 +98,16 @@
             autoplayHoverPause: true,
             responsive: {
                 0: {
-                    items: 1
-
+                    items: 1,
+                    slideBy:1
                 },
                 600: {
                     items: 2,
+                    slideBy:2
                 },
                 1000: {
                     items: 3,
+                    slideBy:3
                 }
             }
 
