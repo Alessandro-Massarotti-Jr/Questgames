@@ -13,9 +13,7 @@ use App\Http\Controllers\GameController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GameController::class, 'viewloja']);
 
 Route::get('/adm', function () {
     return view('adm');

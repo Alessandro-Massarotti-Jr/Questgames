@@ -59,4 +59,12 @@ class GameController extends Controller
         $game->delete();
         return redirect('adm')->with('message', 'Game apagado com sucesso!');
     }
+
+    public function viewloja()
+    {
+        $games = Games::all();
+        $cats = Category::all();
+        return view('welcome', ['games' => $games, 'categorias' =>$cats ]);
+    }
+
 }
