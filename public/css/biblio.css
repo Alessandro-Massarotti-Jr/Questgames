@@ -6,11 +6,60 @@
     --cor-retangulos: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(9, 32%, 4%) 100%);
 }
 
-.div_rect_cima {
-    position: absolute;
+.txt_color {
+    color: var(--cor-terciaria)
+}
+
+.div_biblio_geral {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 71px;
-    left: 0px;
-    top: 0px;
-    background: var(--cor-retangulos);
+    height: 100%;
+}
+
+.div_cima_jg {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.div_games {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+}
+
+.div_jogo {
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    height: 320px;
+    margin-left: 90px;
+}
+
+.img_jogo {
+    height: 260px;
+}
+
+.a_baixar,
+.p_titulo_game,
+.p_recent,
+.p_all {
+    text-align: center;
+}
+
+.div_games_all {
+    border: 1px solid white;
+    margin-top: 70px;
+}
+
+.div_games_recent {
+    border: 1px solid white;
+    margin-top: 70px;
+}
+
+.icone {
+    color: white;
+    height: 30px;
+    width: 30px;
 }
