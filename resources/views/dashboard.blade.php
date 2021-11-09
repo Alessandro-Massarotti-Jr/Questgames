@@ -12,18 +12,20 @@
             <div class="perfil">
                 <div><img class="foto" src="../img/smzinho.png" alt=""></div>
                 <div class="conteudo">
-                <input type="text" class="text_nome" id="pname" name="nome">
+                   <p class="nome_color">Smzinho</p>
 
-                <textarea class=descricao id="story" name="descricao" rows="3" cols="33">
-            </textarea>
-                <button class="botao">Editar Perfil</button>
-        </div>
+                   <p class="descricao_color">Corno azul, ladrão, vendedor de cachorro</p>
+                    <button class="botao">Editar Perfil</button>
+                </div>
             </div>
             <div class="print">
-            <img class="gif" src="../img/smzinho.png" alt="">
-            <img class="gif" src="../img/smzinho.png" alt="">
+                <img class="gif1" src="../img/smzinho.png" alt="">
+                <img class="gif1" src="../img/smzinho.png" alt="">
             </div>
-            
+            <div class="print1">
+                <img class="gif2" src="../img/smzinho.png" alt="">
+                <img class="gif2" src="../img/smzinho.png" alt="">
+            </div>
         </div>
 
     </body>
