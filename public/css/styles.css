@@ -151,9 +151,13 @@ footer{
 
 
 /**************************card de jogo**************************/
-
+.games{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .slidertitle {
-    color: var(--cor-terciaria)
+    color: var(--cor-terciaria);
+    margin-bottom: 5px;  
 }
 
 .slider {
