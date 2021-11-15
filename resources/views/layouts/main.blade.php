@@ -27,15 +27,36 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                 <ion-icon name="menu-outline"></ion-icon>
             </a>
+            <div class="div_icons">
+                <ion-icon class="icons" name="bag-add-outline"></ion-icon>
             <a href="/">Loja</a>
+            </div>
+            <div class="div_icons">
+                <ion-icon class="icons" name="cart-outline"></ion-icon>
             <a href="/">Carrinho (Alfa)</a>
+            </div>
+            <div class="div_icons">
+                <ion-icon class="icons" name="pricetag-outline"></ion-icon>
             <a href="/">Categorias</a>
+            </div>
+            <div class="div_icons">
+                <ion-icon class="icons" name="library-outline"></ion-icon>
             <a href="/">Biblioteca</a>
+            </div>
+            <div class="div_icons">
+                <ion-icon class="icons" name="settings-outline"></ion-icon>
             <a href="/">Configurações</a>
+            </div>
+            <div class="div_icons">
+                <ion-icon class="icons" name="log-in-outline"></ion-icon>
             @guest
                 <a href="/login">Login</a>
+            </div>
+            <div class="div_icons">
+                <ion-icon class="icons" name="person-add-outline"></ion-icon>
                 <a href="/register">cadastro</a>
             @endguest
+        </div>
             @auth                
             <a href="/dashboard" class="nav-link">Perfil</a>
             <form action="logout" method="POST">
