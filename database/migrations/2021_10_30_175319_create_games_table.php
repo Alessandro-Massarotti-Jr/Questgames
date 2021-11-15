@@ -22,6 +22,9 @@ class CreateGamesTable extends Migration
             $table->string("desenvolvedor");
             $table->string("category");
             $table->string("image");
+            $table->string("print1");
+            $table->string("print2");
+            $table->string("print3");
         });
     }
 

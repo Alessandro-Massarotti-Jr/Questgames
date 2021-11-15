@@ -17,6 +17,14 @@ class GameController extends Controller
         $category = Category::all();
         return view('adm', ['todosjogos' => $game, 'categorias' =>$category ]);
     }
+    //EU IA SALVAR A IMAGEM AGORA
+     //EU IA SALVAR A IMAGEM AGORA
+      //EU IA SALVAR A IMAGEM AGORA
+       //EU IA SALVAR A IMAGEM AGORA
+        //EU IA SALVAR A IMAGEM AGORA
+         //EU IA SALVAR A IMAGEM AGORA
+          //EU IA SALVAR A IMAGEM AGORA
+           //EU IA SALVAR A IMAGEM AGORA
 
     public function store(Request $request)
     {
@@ -42,6 +50,45 @@ class GameController extends Controller
             $game->image = $imageName;
 
         }
+        if($request->hasFile('file_img_print1') && $request->file('file_img_print1')->isValid()) {
+
+            $requestImage = $request->file_img_print1;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/games'), $imageName);
+
+            $game->print1 = $imageName;
+
+        }
+        if($request->hasFile('file_img_print2') && $request->file('file_img_print2')->isValid()) {
+
+            $requestImage = $request->file_img_print2;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/games'), $imageName);
+
+            $game->print2 = $imageName;
+
+        }
+        if($request->hasFile('file_img_print3') && $request->file('file_img_print3')->isValid()) {
+
+            $requestImage = $request->file_img_print3;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/games'), $imageName);
+
+            $game->print3 = $imageName;
+
+        }
 
             $game->save();
 
@@ -53,10 +100,31 @@ class GameController extends Controller
         }
     }
 
+    public function catsave(Request $request)
+    {
+        $category = new Category;
+        try {
+            $category->category_name = $request->inpt_nome_cat;
+
+            $category->save();
+
+        return redirect('adm')->with('message', 'Game apagado com sucesso!');
+    } catch (Exception $error) {
+            dd($error);
+        }
+    }
+
     public function destroy($nome)
     {
         $game = Games::where('nome', $nome);
         $game->delete();
+        return redirect('adm')->with('message', 'Game apagado com sucesso!');
+    }
+
+    public function destroycat($nome)
+    {
+        $category = Category::where('category_nome', $nome);
+        $category->delete();
         return redirect('adm')->with('message', 'Game apagado com sucesso!');
     }
 
