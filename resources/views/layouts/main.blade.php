@@ -27,46 +27,44 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                 <ion-icon name="menu-outline"></ion-icon>
             </a>
-            <div class="div_icons">
-                <ion-icon class="icons" name="bag-add-outline"></ion-icon>
-            <a href="/">Loja</a>
-            </div>
-            <div class="div_icons">
-                <ion-icon class="icons" name="cart-outline"></ion-icon>
-            <a href="/">Carrinho (Alfa)</a>
-            </div>
-            <div class="div_icons">
-                <ion-icon class="icons" name="pricetag-outline"></ion-icon>
-            <a href="/">Categorias</a>
-            </div>
-            <div class="div_icons">
-                <ion-icon class="icons" name="library-outline"></ion-icon>
-            <a href="/">Biblioteca</a>
-            </div>
-            <div class="div_icons">
-                <ion-icon class="icons" name="settings-outline"></ion-icon>
-            <a href="/">Configurações</a>
-            </div>
-            <div class="div_icons">
-                <ion-icon class="icons" name="log-in-outline"></ion-icon>
+
+            <a href="/">
+                <ion-icon class="icons" name="bag-add-outline"></ion-icon>Loja
+            </a>
+            <a href="/">
+                <ion-icon class="icons" name="cart-outline"></ion-icon>Carrinho (Alfa)
+            </a>
+            <a href="/">
+                <ion-icon class="icons" name="pricetag-outline"></ion-icon>Categorias
+            </a>
+            <a href="/">
+                <ion-icon class="icons" name="library-outline"></ion-icon>Biblioteca
+            </a>
+            <a href="/">
+                <ion-icon class="icons" name="settings-outline"></ion-icon>Configurações
+            </a>
+
+
+
             @guest
-                <a href="/login">Login</a>
-            </div>
-            <div class="div_icons">
-                <ion-icon class="icons" name="person-add-outline"></ion-icon>
-                <a href="/register">cadastro</a>
-            @endguest
-        </div>
-            @auth                
-            <a href="/dashboard" class="nav-link">Perfil</a>
-            <form action="logout" method="POST">
-                @csrf
-                <a href="/logout" class="nav-link" onclick="event.preventDefault();
-                    this.closest('form').submit();">
-                    <ion-icon name="arrow-redo-outline"></ion-icon>
-                    Logout
+                <a href="/login">
+                    <ion-icon class="icons" name="log-in-outline"></ion-icon>Login
                 </a>
-            </form>
+                <a href="/register">
+                    <ion-icon class="icons" name="person-add-outline"></ion-icon>cadastro
+                </a>
+            @endguest
+
+            @auth
+                <a href="/dashboard" class="nav-link">Perfil</a>
+                <form action="logout" method="POST">
+                    @csrf
+                    <a href="/logout" class="nav-link" onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        <ion-icon name="arrow-redo-outline"></ion-icon>
+                        Logout
+                    </a>
+                </form>
             @endauth
         </div>
         {{-- Fim dentro da side bar --}}
@@ -80,13 +78,36 @@
         <img src="/img/logo.png" alt="" class="logo">
 
     </header>
- 
-        <div id="main" class="" style="">
-            @yield('content')
-        </div>
-   
+
+    <div id="main" class="" style="">
+        @yield('content')
+    </div>
+
+
+
     <footer>
-        <p>QuestGames &copy; 2021</p>
+        <div class="footerlinks">
+            <div class="footerlinkscolumn">
+                <h1>LINKS</h1>
+                <a href="/">Perguntas frequentes</a>
+                <a href="/">Entre em contato</a>
+                <a href="/">Termos de uso</a>
+            </div>
+            <div class="footerlinkscolumn">
+                <h1>SIGA-NOS</h1>
+                <a href="/"><ion-icon class="icons" name="logo-discord"></ion-icon>Discord</a>
+                <a href="/"><ion-icon class="icons" name="logo-twitter"></ion-icon>Twitter</a>
+                <a href="/"><ion-icon class="icons" name="logo-facebook"></ion-icon>Facebook</a>
+            </div>
+            <div class="footerlinkscolumn">
+                <h1>PRIVACIDADE</h1>
+                <a href="/">Politicas</a>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>QuestGames &copy; 2021</p>
+        </div>
     </footer>
 
     <!--Ion icons - icones-->

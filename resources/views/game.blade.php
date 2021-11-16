@@ -23,9 +23,9 @@
             <p>{{$game->description}}</p>
         </div>
         <div class="gameimages">
-            <img src="/img/Test1.png" alt="{{$game->nome}}">
-            <img src="/img/Test2.png" alt="{{$game->nome}}">
-            <img src="/img/Test3.png" alt="{{$game->nome}}">
+            <img src="/img/games/{{$game->print1}}" alt="{{$game->nome}}">
+            <img src="/img/games/{{$game->print2}}" alt="{{$game->nome}}">
+            <img src="/img/games/{{$game->print3}}" alt="{{$game->nome}}">
         </div>
     </div>
 
