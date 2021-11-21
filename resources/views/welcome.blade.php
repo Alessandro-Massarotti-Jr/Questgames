@@ -36,12 +36,12 @@
                 </a>
             </div>
 
-            <div class="navigation-auto">
+            {{-- <div class="navigation-auto">
                 <div class="auto-btn1"></div>
                 <div class="auto-btn2"></div>
                 <div class="auto-btn3"></div>
                 <div class="auto-btn4"></div>
-            </div>
+            </div> --}}
 
 
 

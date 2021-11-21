@@ -15,10 +15,12 @@
                    <p class="nome_color">Smzinho</p>
 
                    <p class="descricao_color">Corno azul, ladrão, vendedor de cachorro</p>
-                    <button class="botao">Editar Perfil</button>
+                    <a href="/" class="botao">Editar Perfil</a>
                 </div>
             </div>
+            <div><p class="publicacao">publicações</p></div>
             <div class="print">
+                
                 <img class="gif1" src="../img/smzinho.png" alt="">
                 <img class="gif1" src="../img/smzinho.png" alt="">
             </div>

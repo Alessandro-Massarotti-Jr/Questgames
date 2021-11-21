@@ -1,338 +1,345 @@
-        /* limpar formatações padrões */
-        /* Variaveis */
-        
-         :root {
-            --cor-principal: #000000;
-            --cor-secundaria: #323232;
-            --cor-terciaria: #ffffff;
-            --cor-retoques: #0c9e35;
-            --body-color: linear-gradient(90deg, hsl(108, 26%, 15%) 0%, hsl(106, 8%, 28%) 100%);
-            --cor-retangulos: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(9, 32%, 4%) 100%);
+    /* limpar formatações padrões */
+    /* Variaveis */
+    
+     :root {
+        --cor-principal: #000000;
+        --cor-secundaria: #323232;
+        --cor-terciaria: #ffffff;
+        --cor-retoques: #0c9e35;
+        --body-color: linear-gradient(90deg, hsl(108, 26%, 15%) 0%, hsl(106, 8%, 28%) 100%);
+        --cor-retangulos: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(9, 32%, 4%) 100%);
+    }
+    /* fim variaveis */
+    
+    @media screen {}
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    @media (max-width: 925px) {
+        button {
+            font-size: 50%;
         }
-        /* fim variaveis */
-        
-        @media screen {}
-        
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        @media (max-width: 925px) {
-            button {
-                font-size: 50%;
-            }
-        }
-        
-        body {
-            display: block;
-            font-size: 1em;
-            font-family: "Trebuchet MS", Helvetica, sans-serif;
-            background: var(--body-color);
-            height: 100vh;
-            width: 100%;
-        }
-        
-        .div_rect_cima {
-            position: absolute;
-            width: 100%;
-            height: 111px;
-            left: 0px;
-            top: 0px;
-            background: var(--cor-retangulos);
-        }
-        
-        .div_rect_meio {
-            width: 100%;
-            margin-top: 130px;
-            background: var(--cor-retangulos);
-            border: 1px solid rgb(82, 81, 81);
-            margin-left: 20px;
-        }
-        
-        .div_rect_esquerda {
-            height: 20vh;
-            margin-top: 130px;
-            background: var(--cor-retangulos);
-            border: 1px solid rgb(82, 81, 81);
-        }
-        
-        .logo {
-            height: 75px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 23px;
-        }
-        
-        .bt_all {
-            color: var(--cor-terciaria);
-            font-size: 18px;
-            line-height: 35px;
-            width: 60%;
-            background-color: transparent;
-            border-style: ridge;
-            border: 0.1px solid transparent;
-            cursor: pointer;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .bt_all:hover {
-            background: var(--cor-retoques);
-        }
-        
-        .div_tb_games {
-            /*TABELA MEXER DEPOIS ABSOLUTE*/
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            color: white;
-            border: 1px solid white;
-            top: 130px;
-            width: 800px;
-            margin-left: 87.5px;
-        }
-        
-        .div_cadastro_games {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .inpt_txt,
-        .file_img {
-            width: 170px;
-        }
-        
-        .txt_format {
-            color: white;
-            width: 180px;
-        }
-        
-        .div_all_bt {
-            width: 18vw;
-        }
-        
-        .div_txt {
-            width: 190px;
-            height: 440px;
-            margin-left: 50px;
-        }
-        /*parte simulação*/
-        
-        #div_simupag {
-            display: flex;
-            flex-direction: column;
-            margin-left: 10px;
-            max-width: 396px;
-            border: 1px solid white;
-        }
-        
-        #div_simuloja {
-            border: 1px solid white;
-            height: 315px;
-            margin-left: 10px;
-        }
-        
-        #div_simuloja img {
-            width: 100%;
-            height: 87.5%;
-            object-fit: contain;
-            object-position: 20% 10%;
-        }
-        
-        #div_simuloja p {
-            color: var(--cor-terciaria);
-            text-align: center;
-        }
-        
-        #div_simuloja h1 {
-            color: var(--cor-terciaria);
-            text-align: center;
-            border: 1px solid white;
-        }
-        
-        #div_simuloja a {
-            text-decoration: none;
-            text-align: center;
-        }
-        
-        #p_preco3 {
-            color: var(--cor-terciaria);
-            font-size: 22px;
-        }
-        
-        #bt_testar {
-            width: 70px;
-            height: 25px;
-        }
-        
-        #bt_salvar {
-            width: 70px;
-            height: 25px;
-        }
-        
-        .div_imgfundo,
-        #img_fundo {
-            height: 23vh;
-            width: 32vw;
-        }
-        
-        #p_titulo {
-            color: white;
-        }
-        
-        .div_rect_compra {
-            width: 40px;
-            margin-top: 3px;
-        }
-        
-        #p_preco2 {
-            color: white;
-            height: 2%;
-            width: 3%;
-        }
-        
-        .div_rect_desc {
-            border: 1px solid rgb(43, 41, 41);
-            background-color: rgb(43, 41, 41);
-            width: 250px;
-            height: 120px;
-            border: 1px solid white;
-        }
-        
-        #p_desc2 {
-            color: white;
-            font-size: 12px;
-        }
-        
-        .div_3img {
-            border: 1px solid white;
-            width: 18%;
-            max-height: 170px;
-        }
-        
-        #img_print1 {
-            width: 100%;
-            height: 30%;
-        }
-        
-        #img_print2 {
-            width: 100%;
-            height: 30%;
-        }
-        
-        #img_print3 {
-            width: 100%;
-            height: 30%;
-        }
-        
-        #p_cadastro {
-            color: var(--cor-terciaria);
-            text-align: center;
-            font-size: 25px;
-        }
-        
-        #div_alterar {
-            margin-top: 28px;
-            margin-left: 50px;
-            height: 100px;
-            width: 100%;
-        }
-        
-        .p_alterar {
-            color: var(--cor-terciaria);
-            text-align: center;
-            font-size: 25px;
-        }
-        
-        #div_excluir {
-            height: 100px;
-            width: 100%;
-            margin-left: 50px;
-        }
-        
-        .p_excluir {
-            color: var(--cor-terciaria);
-            text-align: center;
-            font-size: 25px;
-        }
-        
-        #sel_alterar_id {
-            z-index: 10;
-            height: 25px;
-        }
-        
-        .inpt_alt {
-            width: 18%;
-        }
-        
-        .bt_alt_alterar {
-            height: 25px;
-            width: 50px;
-            z-index: 10;
-        }
-        
-        .inpt_select_category {
-            margin-left: 2%;
-        }
-        
-        .txt_fundo_pag {
-            color: white;
-        }
-        
-        .txt_print1 {
-            color: white
-        }
-        
-        .txt_print2 {
-            color: white
-        }
-        
-        .txt_print3 {
-            color: white
-        }
-        
-        .div_tres_quadrados {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-        }
-        
-        .div_dois_retangulo {
-            display: flex;
-            flex-direction: row;
-        }
-        
-        .div_tit_preco {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        
-        .div_desc_img {
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            justify-content: space-around;
-        }
-        
-        .div_tr {
-            display: flex;
-            flex-direction: row;
-        }
-        
-        .th_td_margin {
-            text-align: center;
-            border: 1px solid white;
-        }
-        
-        .all_txt {
-            color: white;
-            margin-top: 5px;
-        }
-        
-        .bt_margin {
-            margin-top: 10px;
-        }
+    }
+    
+    body {
+        display: block;
+        font-size: 1em;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        background: var(--body-color);
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .div_rect_cima {
+        position: absolute;
+        width: 100%;
+        height: 111px;
+        left: 0px;
+        top: 0px;
+        background: var(--cor-retangulos);
+    }
+    
+    .div_rect_meio {
+        margin-top: 130px;
+        background: var(--cor-retangulos);
+        border: 1px solid rgb(82, 81, 81);
+        margin-right: 160px;
+        margin-left: auto;
+    }
+    
+    .logo {
+        height: 75px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 23px;
+    }
+    
+    .bt_all {
+        color: var(--cor-terciaria);
+        font-size: 18px;
+        line-height: 35px;
+        width: 60%;
+        background-color: transparent;
+        border-style: ridge;
+        border: 0.1px solid transparent;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .bt_all:hover {
+        background: var(--cor-retoques);
+    }
+    
+    .div_tb_games {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        border: 1px solid white;
+        top: 130px;
+        width: 890px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .div_cadastro_games {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inpt_txt,
+    .file_img {
+        width: 170px;
+    }
+    
+    .txt_format {
+        color: white;
+        width: 180px;
+    }
+    
+    .div_all_bt {
+        width: 18vw;
+    }
+    
+    .div_txt {
+        width: 190px;
+        height: 440px;
+        margin-left: 50px;
+    }
+    /*parte simulação*/
+    
+    #div_simupag {
+        display: flex;
+        flex-direction: column;
+        margin-left: 4px;
+        max-width: 396px;
+        border: 1px solid white;
+    }
+    
+    #div_simuloja {
+        border: 1px solid white;
+        height: 315px;
+        margin-left: 10px;
+    }
+    
+    #div_simuloja img {
+        width: 100%;
+        height: 87.5%;
+        object-fit: contain;
+        object-position: 20% 10%;
+    }
+    
+    #div_simuloja p {
+        color: var(--cor-terciaria);
+        text-align: center;
+    }
+    
+    #div_simuloja h1 {
+        color: var(--cor-terciaria);
+        text-align: center;
+        border: 1px solid white;
+    }
+    
+    #div_simuloja a {
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    #p_preco3 {
+        color: var(--cor-terciaria);
+        font-size: 22px;
+    }
+    
+    #bt_testar {
+        width: 70px;
+        height: 25px;
+    }
+    
+    #bt_salvar {
+        width: 70px;
+        height: 25px;
+    }
+    
+    .div_imgfundo,
+    #img_fundo {
+        height: 23vh;
+        width: 32vw;
+    }
+    
+    #p_titulo {
+        color: white;
+    }
+    
+    .div_rect_compra {
+        width: 40px;
+        margin-top: 3px;
+    }
+    
+    #p_preco2 {
+        color: white;
+        height: 2%;
+        width: 3%;
+    }
+    
+    .div_rect_desc {
+        border: 1px solid rgb(43, 41, 41);
+        background-color: rgb(43, 41, 41);
+        width: 250px;
+        height: 120px;
+    }
+    
+    #p_desc2 {
+        color: white;
+        font-size: 12px;
+    }
+    
+    .div_3img {
+        border: 1px solid white;
+        width: 18%;
+        max-height: 170px;
+    }
+    
+    #img_print1 {
+        width: 100%;
+        height: 30%;
+    }
+    
+    #img_print2 {
+        width: 100%;
+        height: 30%;
+    }
+    
+    #img_print3 {
+        width: 100%;
+        height: 30%;
+    }
+    
+    #p_cadastro {
+        color: var(--cor-terciaria);
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    #div_acoes {
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        margin-left: 50px;
+        margin-top: 25px;
+    }
+    
+    .p_excluir {
+        color: var(--cor-terciaria);
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    #sel_alterar_id {
+        z-index: 10;
+        height: 25px;
+        border: 1px solid white;
+        margin-top: 11px;
+    }
+    
+    .inpt_alt {
+        width: 18%;
+    }
+    
+    .bt_alt_alterar {
+        height: 25px;
+        width: 69px;
+        z-index: 10;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .inpt_select_category {
+        margin-left: 2%;
+    }
+    
+    .txt_fundo_pag {
+        color: white;
+    }
+    
+    .inpt_txt_ex_nome {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .txt_print1 {
+        color: white
+    }
+    
+    .txt_print2 {
+        color: white
+    }
+    
+    .txt_print3 {
+        color: white
+    }
+    
+    .div_tres_quadrados {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .div_dois_retangulo {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .div_tit_preco {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .div_desc_img {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: space-around;
+    }
+    
+    .div_tr {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .th_td_margin {
+        text-align: center;
+    }
+    
+    .all_txt {
+        color: white;
+        margin-top: 5px;
+    }
+    
+    .bt_margin {
+        margin-top: 10px;
+    }
+    
+    .div_cadastrar_cat {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div_excluir_cat {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    
+    .div_excluir {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }

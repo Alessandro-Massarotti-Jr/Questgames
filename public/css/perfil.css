@@ -14,6 +14,8 @@
     .perfil {
         display: flex;
         flex-direction: row;
+        margin-left: 50px;
+        margin-top: 30px;
     }
     
     .foto {
@@ -44,6 +46,11 @@
     }
     
     .botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: 00.3s;
         color: white;
         background: #666565;
         border-radius: 5px;
@@ -52,6 +59,11 @@
         margin-top: 15px;
         margin-left: 15px;
         border: 0.1px solid white;
+    }
+    
+    .botao:hover {
+        background-color: #0c9e35;
+        color: white;
     }
     
     .gif1 {
@@ -96,4 +108,12 @@
         font-size: 160%;
         color: white;
         margin-left: 20px;
+    }
+    
+    .publicacao {
+        text-align: center;
+        color: white;
+        font-size: 60px;
+        margin-left: 150px;
+        margin-top: 100px;
     }

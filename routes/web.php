@@ -14,7 +14,10 @@ use App\Http\Controllers\GameController;
 */
 
 Route::get('/', [GameController::class, 'viewloja']);
+
 Route::get('/game/{id}', [GameController::class, 'show']);
+
+Route::get('/perfil', [PerfilsocialController::class, 'index']);
 
 Route::get('/adm', function () {
     return view('adm');

@@ -31,18 +31,18 @@
             <a href="/">
                 <ion-icon class="icons" name="bag-add-outline"></ion-icon>Loja
             </a>
-            <a href="/">
+            {{-- <a href="/">
                 <ion-icon class="icons" name="cart-outline"></ion-icon>Carrinho (Alfa)
-            </a>
+            </a> --}}
             <a href="/">
                 <ion-icon class="icons" name="pricetag-outline"></ion-icon>Categorias
             </a>
             <a href="/">
                 <ion-icon class="icons" name="library-outline"></ion-icon>Biblioteca
             </a>
-            <a href="/">
+            {{-- <a href="/">
                 <ion-icon class="icons" name="settings-outline"></ion-icon>Configurações
-            </a>
+            </a> --}}
 
 
 
@@ -56,12 +56,12 @@
             @endguest
 
             @auth
-                <a href="/dashboard" class="nav-link">Perfil</a>
+                <a href="/dashboard"> <ion-icon class="icons" name="person-outline"></ion-icon> Perfil</a>
                 <form action="logout" method="POST">
                     @csrf
-                    <a href="/logout" class="nav-link" onclick="event.preventDefault();
+                    <a href="/logout" onclick="event.preventDefault();
                         this.closest('form').submit();">
-                        <ion-icon name="arrow-redo-outline"></ion-icon>
+                        <ion-icon class="icons" name="arrow-redo-outline"></ion-icon>
                         Logout
                     </a>
                 </form>
@@ -81,11 +81,6 @@
 
     <div id="main" class="" style="">
         @yield('content')
-    </div>
-
-
-
-    <footer>
         <div class="footerlinks">
             <div class="footerlinkscolumn">
                 <h1>LINKS</h1>
@@ -103,6 +98,12 @@
                 <h1>PRIVACIDADE</h1>
                 <a href="/">Politicas</a>
             </div>
+    </div>
+
+
+
+    <footer>
+        
 
         </div>
         <div class="footer">

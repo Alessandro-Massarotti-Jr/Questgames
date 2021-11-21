@@ -28,7 +28,6 @@ att, Alessandro
 }
 
 body {
-
     background-color: var(--cor-principal);
 }
 
@@ -37,8 +36,7 @@ header {
     display: flex;
 }
 
-footer{
-    margin-top: 20px;
+footer {
     display: flex;
     flex-direction: column;
 }
@@ -151,13 +149,15 @@ footer{
 
 
 /**************************card de jogo**************************/
-.games{
+
+.games {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .slidertitle {
     color: var(--cor-terciaria);
-    margin-bottom: 5px;  
+    margin-bottom: 5px;
 }
 
 .slider {
@@ -317,30 +317,32 @@ footer{
     margin-right: 3px;
 }
 
-.footerlinks{
+.footerlinks {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--cor-quaternaria);
 }
-.footerlinkscolumn{
+
+.footerlinkscolumn {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.footerlinkscolumn h1{
-color: var(--cor-terciaria);
+.footerlinkscolumn h1 {
+    color: var(--cor-terciaria);
 }
 
-.footerlinkscolumn a{
-color: var(--cor-terciaria);
-margin-top: 5px;
-margin-bottom: 5px;
-text-decoration: none;
-transition: 0.3s;
+.footerlinkscolumn a {
+    color: var(--cor-terciaria);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    transition: 0.3s;
 }
-.footerlinkscolumn a:hover{
+
+.footerlinkscolumn a:hover {
     color: var(--cor-retoques);
 }

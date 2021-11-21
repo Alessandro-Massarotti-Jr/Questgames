@@ -2,43 +2,18 @@ body {
     position: relative;
     background-color: black;
     z-index: 1;
-    background-image: url("../img/Flogin.png");
     background-repeat: no-repeat;
     background-size: 50% 110%;
     width: 99%;
     height: 100%;
-    top: 0%;
-    left: 0%;
 }
 
-@media screen and (max-width: 1152px) {
-    body {
-        background-image: url("../img/Flogin.png");
-        background-size: 53% 110%;
-        width: 95%;
-        height: 60%;
-        left: 0%;
+@media only screen and (max-width: 600px) {
+    .imagem {
+        display: none;
     }
-}
-
-@media screen and (max-width: 1000px) {
-    body {
-        position: sticky;
-        background-image: url("../img/Flogin.png");
-        background-size: 100% 110%;
-        width: 15%;
-        height: 60%;
-        left: 0%;
-    }
-}
-
-@media screen and (max-width: 890px) {
-    body {
-        position: sticky;
-        background-image: url("../img/Flogin.png");
-        width: 15%;
-        height: 60%;
-        left: 0%;
+    .geral {
+        width: 100%;
     }
 }
 
@@ -59,7 +34,7 @@ label {
 
 .div_cx_txt_email {
     position: relative;
-    width: 90%;
+    width: 70%;
     height: 7%;
     border-color: Transparent;
     cursor: auto;
@@ -69,8 +44,7 @@ label {
     font-size: 23px;
     padding-top: 19px;
     bottom: 85px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 110px;
 }
 
 .cx_all {
@@ -83,8 +57,7 @@ label {
     height: 30px;
     width: 290px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 87px;
     bottom: 2px;
 }
 
@@ -121,7 +94,7 @@ label {
     position: relative;
     height: 6%;
     width: 30%;
-    left: 15%;
+    margin-left: 158px;
     bottom: 80px;
 }
 
@@ -131,11 +104,11 @@ label {
 }
 
 .div_esqueceu {
-    position: absolute;
+    margin-bottom: 100px;
+    margin-top: -100px;
+    margin-left: 360px;
     height: 2.5%;
     width: 26%;
-    left: 52%;
-    top: 68%;
 }
 
 .div_esqueceu1 {
@@ -143,19 +116,15 @@ label {
 }
 
 .geral {
-    position: relative;
-    width: 520px;
+    width: 50%;
     height: 550px;
-    left: 55%;
-    top: 0px;
 }
 
 .txt_bem {
     position: relative;
     color: rgb(255, 255, 255);
     font-size: 26px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 280px;
     width: 25%;
     bottom: 30px;
 }
@@ -163,8 +132,7 @@ label {
 .txt_conta {
     position: relative;
     color: rgb(255, 255, 255);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 200px;
     font-size: 33px;
     bottom: 50px;
     width: 56%;
@@ -174,4 +142,20 @@ label {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+}
+
+.imagem {
+    width: 50%;
+    height: 780px;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
