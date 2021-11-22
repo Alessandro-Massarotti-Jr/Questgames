@@ -31,14 +31,21 @@
 
 .div_jogo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 220px;
     height: 320px;
     margin-left: 90px;
 }
 
+.div_biblioteca {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid white;
+}
+
 .img_jogo {
-    height: 260px;
+    height: 75%;
 }
 
 .a_baixar,

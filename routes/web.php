@@ -15,9 +15,9 @@ use App\Http\Controllers\GameController;
 
 Route::get('/', [GameController::class, 'viewloja']);
 
-Route::get('/game/{id}', [GameController::class, 'show']);
+Route::get('/biblioteca', [GameController::class, 'biblio']);
 
-Route::get('/perfil', [PerfilsocialController::class, 'index']);
+Route::get('/game/{id}', [GameController::class, 'show']);
 
 Route::get('/adm', function () {
     return view('adm');
@@ -25,9 +25,7 @@ Route::get('/adm', function () {
 Route::get('/game', function () {
     return view('game');
 });
-Route::get('/biblioteca', function () {
-    return view('biblioteca');
-});
+
 Route::get('/compra', function () {
     return view('compra');
 });
@@ -41,4 +39,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::group(['middleware' => ['web']], function(){
     Route::resource('adm', GameController::class);
+});
+
+Route::get('/perfil', function () {
+    return view('resources/views/profile/update-profile-information-form.blade.php'
+);
 });

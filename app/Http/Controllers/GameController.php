@@ -143,4 +143,13 @@ class GameController extends Controller
         
     }
 
+    public function biblio()
+    {
+        $games = Games::all();
+        $cats = Category::all();
+        return view('biblioteca', ['games' => $games, 'categorias' =>$cats ]);
+    }
+
 }
+
+    

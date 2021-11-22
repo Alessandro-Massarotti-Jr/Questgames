@@ -56,16 +56,16 @@
                             <div class="div_txt">
                                 <p class="all_txt">Nome:</p>
                                 <input type="text" id="inpt_txt_nome" name="inpt_txt_nome"
-                                    class="all_txt">
+                                    class="txt_caixa">
                                 <p class="all_txt">Preço:</p>
                                 <input type="text" id="inpt_txt_preco" name="inpt_txt_preco"
-                                    class="all_txt">
+                                    class="txt_caixa">
                                 <p class="all_txt">Descrição:</p>
                                 <input type="text" id="inpt_txt_descr" name="inpt_txt_descr"
-                                    class="all_txt">
+                                    class="txt_caixa">
                                 <p class="all_txt">Desenvolvedor:</p>
                                 <input type="text" id="inpt_txt_desenvol" name="inpt_txt_desenvol"
-                                    class="all_txt">
+                                    class="txt_caixa">
                                 <p class="all_txt">Categoria:</p>
                                 <select name="inpt_select_category"
                                     id="inpt_select_category">

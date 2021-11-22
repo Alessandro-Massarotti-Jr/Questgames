@@ -37,7 +37,7 @@
             <a href="/">
                 <ion-icon class="icons" name="pricetag-outline"></ion-icon>Categorias
             </a>
-            <a href="/">
+            <a href="/biblioteca">
                 <ion-icon class="icons" name="library-outline"></ion-icon>Biblioteca
             </a>
             {{-- <a href="/">
