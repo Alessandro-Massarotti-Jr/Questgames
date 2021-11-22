@@ -37,9 +37,7 @@
             <a href="/">
                 <ion-icon class="icons" name="pricetag-outline"></ion-icon>Categorias
             </a>
-            <a href="/biblioteca">
-                <ion-icon class="icons" name="library-outline"></ion-icon>Biblioteca
-            </a>
+           
             {{-- <a href="/">
                 <ion-icon class="icons" name="settings-outline"></ion-icon>Configurações
             </a> --}}
@@ -56,6 +54,9 @@
             @endguest
 
             @auth
+            <a href="/biblioteca">
+                <ion-icon class="icons" name="library-outline"></ion-icon>Biblioteca
+            </a>
                 <a href="/dashboard"> <ion-icon class="icons" name="person-outline"></ion-icon> Perfil</a>
                 <form action="logout" method="POST">
                     @csrf

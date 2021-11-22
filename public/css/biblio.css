@@ -6,67 +6,38 @@
     --cor-retangulos: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(9, 32%, 4%) 100%);
 }
 
-.txt_color {
-    color: var(--cor-terciaria)
+.biblio{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px;
 }
-
-.div_biblio_geral {
+.biblio-card{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+   width: 200px;
+   height: 300px;
+   
+   color: var(--cor-terciaria);
+   margin: 20px;
+}
+.biblio-card-img{
+width: 200px;
+height:250px
+}
+.biblio-card-img img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.biblio-card-content{
+
 }
 
-.div_cima_jg {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-}
-
-.div_games {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid white;
-}
-
-.div_jogo {
-    display: flex;
-    flex-direction: row;
-    max-width: 220px;
-    height: 320px;
-    margin-left: 90px;
-}
-
-.div_biblioteca {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    border: 1px solid white;
-}
-
-.img_jogo {
-    height: 75%;
-}
-
-.a_baixar,
-.p_titulo_game,
-.p_recent,
-.p_all {
-    text-align: center;
-}
-
-.div_games_all {
-    border: 1px solid white;
-    margin-top: 70px;
-}
-
-.div_games_recent {
-    border: 1px solid white;
-    margin-top: 70px;
-}
-
-.icone {
-    color: white;
-    height: 30px;
-    width: 30px;
+.biblio-card:hover{
+    transform: scale(1.1);
+    color:var(--cor-retoques);
 }
