@@ -3,6 +3,12 @@
 @section('content')
 <link rel="stylesheet" href="/css/biblio.css">
 
+
+
+<div class="biblio-search">
+    <ion-icon class="search-icon" name="search-outline"></ion-icon>
+    <input type="text" placeholder="Procurar...">
+</div>
     
         <div class="biblio">
 
