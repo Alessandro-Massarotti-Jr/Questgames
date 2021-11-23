@@ -80,7 +80,7 @@
 
     </header>
 
-    <div id="main" class="" style="">
+    <div id="main">
         @yield('content')
         <div class="footerlinks">
             <div class="footerlinkscolumn">
