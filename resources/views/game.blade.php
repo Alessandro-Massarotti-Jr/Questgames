@@ -10,7 +10,7 @@
         <img class="img" src="/img/games/{{$game->image}}" alt="{{$game->nome}}">
     </div>
 
-
+    <div class="all-lines" >
     <div class="line1">
         <h1 class="gamename">{{$game->nome}}</h1>
 
@@ -28,5 +28,5 @@
             <img src="/img/games/{{$game->print3}}" alt="{{$game->nome}}">
         </div>
     </div>
-
+    </div>
 @endsection
