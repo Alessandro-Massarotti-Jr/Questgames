@@ -8,11 +8,13 @@
 
 
 .biblio-search{
-    margin-top: 30px;
+   
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding: 10px;
 }
 .search-icon{
     width: 30px;
