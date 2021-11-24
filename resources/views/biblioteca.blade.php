@@ -12,90 +12,26 @@
     
         <div class="biblio">
 
+
+            @foreach ($biblios as $biblio)
+            @foreach ($games as $game)
+            @if ($biblio->user_id==$user->id && $biblio->game_id==$game->id)
+                
+           
+
+          
               <div class="biblio-card">
-                  <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
+                  <div class="biblio-card-img"><img src="/img/games/{{$game->image}}" alt="{{$game->nome}}"></div>
                   <div class="biblio-card-content">
-                      <h1>Flogin</h1>
+                      <h1>{{$game->nome}}</h1>
                   </div>
               </div>
 
-              <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/Test1.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>The human</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/Test2.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Drova</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/Test3.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Fuffy gore</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/Test4.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Archer</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
+              @endif
+              @endforeach
+              @endforeach
 
 
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
-
-            <div class="biblio-card">
-                <div class="biblio-card-img"><img src="/img/flogin.png" alt="Imagen Top"></div>
-                <div class="biblio-card-content">
-                    <h1>Flogin</h1>
-                </div>
-            </div>
 
 
         </div>

@@ -17,6 +17,8 @@ Route::get('/', [GameController::class, 'viewloja']);
 
 Route::get('/biblioteca', [GameController::class, 'biblio']);
 
+Route::post('/biblioteca/save', [GameController::class, 'bibliosave'])->name('biblio/save');
+
 Route::get('/game/{id}', [GameController::class, 'show']);
 
 Route::get('/adm', function () {

@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Games;
 use App\Models\Category;
+use App\Models\User;
+use App\Models\Biblio;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Post;
+use Illuminate\Support\Facades\Auth;
 
 class GameController extends Controller
 {
@@ -139,7 +142,10 @@ class GameController extends Controller
 
         $game = Games::findOrFail($id);
 
-        return view('game', ['game' => $game]);
+        $user = Auth::User();
+
+
+        return view('game', ['game' => $game, 'user'=>$user]);
         
     }
 
@@ -147,8 +153,27 @@ class GameController extends Controller
     {
         $games = Games::all();
         $cats = Category::all();
-        return view('biblioteca', ['games' => $games, 'categorias' =>$cats ]);
+        $user = Auth::User();
+        $biblios = biblio::all();
+
+        return view('biblioteca', ['games' => $games, 'categorias' =>$cats,'biblios'=>$biblios, 'user'=>$user ]);
     }
+
+
+
+    public function bibliosave(Request $request)
+    {
+
+        $biblio = new Biblio;
+
+        $biblio->user_id = $request->userid;
+        $biblio->game_id = $request->gameid;
+
+        $biblio->save();
+        
+        return redirect('/biblioteca');
+    }
+
 
 }
 
