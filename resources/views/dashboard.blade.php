@@ -10,11 +10,11 @@
 
     <div class="geral">
         <div class="perfil">
-            <div><img class="foto" src="../img/default.png" alt=""></div>
+            <div><img class="foto" src="{{$user->profile_photo_path}}" alt="{{$user->name}}"></div>
             <div class="conteudo">
-                <p class="nome_color">Defaultplayer001</p>
+                <p class="nome_color">{{$user->name}}</p>
 
-                <p class="descricao_color">Default desc</p>
+                <p class="descricao_color">{{$user->user_desc}}</p>
                 
                 <a href="/edit" class="botao">Editar Perfil</a>
               
@@ -26,13 +26,13 @@
 
         <div class="print-sec">
             <div class="print">
-               <div class="print-img"><img src="/img/default_publi.png" alt=""></div>
-               <div class="print-img"><img src="/img/default_publi.png" alt=""></div>
+               <div class="print-img"><img src="{{$user->post1}}" alt=""></div>
+               <div class="print-img"><img src="{{$user->post2}}" alt=""></div>
                
             </div>
             <div class="print">
-                <div class="print-img"><img src="/img/default_publi.png" alt=""></div>
-                <div class="print-img"><img src="/img/default_publi.png" alt=""></div>
+                <div class="print-img"><img src="{{$user->post3}}" alt=""></div>
+                <div class="print-img"><img src="{{$user->post4}}" alt=""></div>
             </div>
         </div>
     </div>

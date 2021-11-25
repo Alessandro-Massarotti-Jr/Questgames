@@ -167,6 +167,15 @@ class GameController extends Controller
     }
 
 
+    public function perfil()
+    {
+        $user = Auth::User();
+    
+        
+        return view('dashboard',['user'=>$user]);
+    }
+
+
 }
 
     

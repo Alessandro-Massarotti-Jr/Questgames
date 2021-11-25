@@ -28,10 +28,17 @@ class CreateNewUser implements CreatesNewUsers
         ])->validate();
 
         return User::create([
+            
             'name' => $input['name'],
             'email' => $input['email'],
             'profile_photo_path' => $input['email'],
             'password' => Hash::make($input['password']),
+            'profile_photo_path'=>'/img/default.png',
+            'user_desc'=>$input['email'],
+            'post1'=>'/img/souls meme.jpeg',
+            'post2'=>'/img/souls meme.jpeg',
+            'post3'=>'/img/souls meme.jpeg',
+            'post4'=>'/img/souls meme.jpeg',
         ]);
     }
 }
