@@ -128,6 +128,7 @@
 .print-img {
     width: 400px;
     margin: 20px;
+    border: 2px solid white;
 }
 
 .print-img img {
@@ -173,7 +174,35 @@
     margin-left: 10px;
 }
 
-.file_foto {
+#file_publi {
+    position: absolute;
+    left: 399px;
+    width: 399px;
+    height: 399px;
+    color: transparent;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+#file_publi::file-selector-button {
+    border: 2px solid transparent;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: transparent;
+    color: transparent;
+    transition: 1s;
+    width: 399px;
+    height: 399px;
+}
+
+#file_publi::file-selector-button:hover {
+    background-color: #f8f8f885;
+    border: 1px solid #f8f8f885;
+    width: 399px;
+    height: 399px;
+}
+
+#file_foto {
     position: absolute;
     left: 300px;
     width: 215px;
@@ -182,7 +211,7 @@
     background-color: transparent;
 }
 
-input[type=file]::file-selector-button {
+#file_foto::file-selector-button {
     border: 2px solid transparent;
     padding: .2em .4em;
     border-radius: .2em;
@@ -193,9 +222,96 @@ input[type=file]::file-selector-button {
     height: 215px;
 }
 
-input[type=file]::file-selector-button:hover {
+#file_foto::file-selector-button:hover {
     background-color: #f8f8f885;
     border: 1px solid #f8f8f885;
     width: 215px;
     height: 215px;
+}
+
+#file_publi2 {
+    position: absolute;
+    left: 839px;
+    width: 399px;
+    height: 399px;
+    color: transparent;
+    background-color: transparent;
+}
+
+#file_publi2::file-selector-button {
+    border: 2px solid transparent;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: transparent;
+    color: transparent;
+    transition: 1s;
+    width: 399px;
+    height: 399px;
+}
+
+#file_publi2::file-selector-button:hover {
+    background-color: #f8f8f885;
+    border: 1px solid #f8f8f885;
+    width: 399px;
+    height: 399px;
+}
+
+#file_publi3 {
+    position: absolute;
+    left: 399px;
+    width: 399px;
+    height: 399px;
+    top: 926px;
+}
+
+#file_publi3::file-selector-button {
+    border: 2px solid transparent;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: transparent;
+    color: transparent;
+    transition: 1s;
+    width: 399px;
+    height: 399px;
+}
+
+#file_publi3::file-selector-button:hover {
+    background-color: #f8f8f885;
+    border: 1px solid #f8f8f885;
+    width: 399px;
+    height: 399px;
+}
+
+#file_publi3 {
+    position: absolute;
+    left: 399px;
+    width: 399px;
+    height: 399px;
+    top: 926px;
+}
+
+#file_publi4 {
+    position: absolute;
+    left: 839px;
+    width: 399px;
+    height: 399px;
+    top: 926px;
+}
+
+#file_publi4::file-selector-button {
+    border: 2px solid transparent;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: transparent;
+    color: transparent;
+    transition: 1s;
+    width: 399px;
+    height: 399px;
+}
+
+#file_publi4::file-selector-button:hover {
+    background-color: #f8f8f885;
+    border: 1px solid #f8f8f885;
+    width: 399px;
+    height: 399px;
 }
