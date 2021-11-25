@@ -10,13 +10,15 @@
 
     <div class="geral">
         <div class="perfil">
-            <div><img class="foto" src="../img/default.png" alt=""></div>
+            <div><img class="foto_edit" src="../img/default.png" alt="Alterar">
+                <input type="file" name="file_foto" class="file_foto">
+            </div>
             <div class="conteudo">
-                <p class="nome_color">Defaultplayer001</p>
+                <input type="text" class="cx_nick" name="cx_nick">
 
-                <p class="descricao_color">Default desc</p>
+                <textarea type="text" class="cx_desc" name="cx_nick"></textarea>
                 
-                <a href="/edit" class="botao">Editar Perfil</a>
+                <a href="" class="botao_editar">Salvar Perfil</a>
               
             </div>
         </div>
@@ -37,6 +39,7 @@
         </div>
     </div>
 
+    <script>
 
 
 @endsection

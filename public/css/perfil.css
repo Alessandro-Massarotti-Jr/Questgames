@@ -1,128 +1,201 @@
-    .geral {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-    }
-    
-    .conteudo {
-        display: flex;
-        flex-direction: column;
-        width: 45%;
-    }
-    
-    .perfil {
-        display: flex;
-        flex-direction: row;
-        margin-left: 50px;
-        margin-top: 30px;
-    }
-    
-    .foto {
-        top: 5%;
-        left: 5%;
-        width: 220px;
-        height: 210px;
-    }
-    
-    .text_nome {
-        width: 80%;
-        bottom: 10%;
-        left: 10%;
-        background-color: transparent;
-        color: white;
-        font-size: 200%;
-        border: 0.1px solid black;
-    }
-    
-    .descricao {
-        width: 100%;
-        resize: none;
-        background-color: transparent;
-        color: white;
-        font-size: 170%;
-        bottom: 50%;
-        border: 0.1px solid black;
-    }
-    
-    .botao {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        transition: 00.3s;
-        color: white;
-        background: #666565;
-        border-radius: 5px;
-        width: 50%;
-        height: 5vh;
-        margin-top: 15px;
-        margin-left: 15px;
-        border: 0.1px solid white;
-    }
-    
-    .botao:hover {
-        background-color: #0c9e35;
-        color: white;
-    }
-    
-    .gif1 {
-        width: 50%;
-        height: 50%;
-        top: 20vh;
-        left: 50%;
-        padding-left: 10%;
-    }
-    
-    .gif2 {
-        width: 50%;
-        height: 50%;
-        top: 20vh;
-        left: 50%;
-        padding-left: 10%;
-        padding-top: 10%;
-    }
-    
-    .print {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-     
-    }
-    
-    .print-sec {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px;
+.geral {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
 
-    }
-    .print-img{
-        width: 400px;
-        margin: 20px;
-        
-    }
-    .print-img img{
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        
-    }
-    
-    .nome_color {
-        font-size: 200%;
-        color: white;
-        margin-left: 20px;
-    }
-    
-    .descricao_color {
-        font-size: 160%;
-        color: white;
-        margin-left: 20px;
-    }
-    
-    .publicacao {
-        text-align: center;
-        color: white;
-        font-size: 60px;
-    }
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.foto {
+    top: 5%;
+    left: 5%;
+    width: 220px;
+    height: 21 0px;
+}
+
+.foto_edit {
+    top: 5%;
+    left: 5%;
+    width: 220px;
+    height: 210px;
+    filter: saturate(0%) invert(0%) drop-shadow(0px 0px 0px #0000ff);
+}
+
+.foto_edit:hover {
+    filter: saturate(0%) invert(100%) drop-shadow(0px 0px 0px #0000ff);
+}
+
+.text_nome {
+    width: 80%;
+    bottom: 10%;
+    left: 10%;
+    background-color: transparent;
+    color: white;
+    font-size: 200%;
+    border: 0.1px solid black;
+}
+
+.descricao {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    color: white;
+    font-size: 170%;
+    bottom: 50%;
+    border: 0.1px solid black;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 00.3s;
+    color: white;
+    background: #666565;
+    border-radius: 5px;
+    width: 50%;
+    height: 5vh;
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 0.1px solid white;
+}
+
+.botao_editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 00.3s;
+    color: white;
+    background: #666565;
+    border-radius: 5px;
+    width: 50%;
+    height: 5vh;
+    margin-top: 15px;
+    margin-left: 38px;
+    border: 0.1px solid white;
+    backface-visibility: hidden;
+}
+
+.botao:hover {
+    background-color: #0c9e35;
+    color: white;
+}
+
+.gif1 {
+    width: 50%;
+    height: 50%;
+    top: 20vh;
+    left: 50%;
+    padding-left: 10%;
+}
+
+.gif2 {
+    width: 50%;
+    height: 50%;
+    top: 20vh;
+    left: 50%;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.print {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.print-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.print-img {
+    width: 400px;
+    margin: 20px;
+}
+
+.print-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    filter: saturate(0%) invert(0%) drop-shadow(0px 0px 0px #0000ff);
+}
+
+.nome_color {
+    font-size: 200%;
+    color: white;
+    margin-left: 20px;
+}
+
+.descricao_color {
+    font-size: 160%;
+    color: white;
+    margin-left: 20px;
+}
+
+.publicacao {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+.cx_nick {
+    width: 300px;
+    bottom: 10%;
+    left: 10%;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.cx_desc {
+    width: 300px;
+    margin-top: 20px;
+    height: 105px;
+    resize: none;
+    font-size: 15px;
+    bottom: 50%;
+    margin-left: 10px;
+}
+
+.file_foto {
+    position: absolute;
+    left: 300px;
+    width: 215px;
+    height: 210px;
+    color: transparent;
+    background-color: transparent;
+}
+
+input[type=file]::file-selector-button {
+    border: 2px solid transparent;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: transparent;
+    color: transparent;
+    transition: 1s;
+    width: 215px;
+    height: 215px;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #f8f8f885;
+    border: 1px solid #f8f8f885;
+    width: 215px;
+    height: 215px;
+}

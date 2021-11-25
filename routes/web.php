@@ -22,6 +22,11 @@ Route::get('/game/{id}', [GameController::class, 'show']);
 Route::get('/adm', function () {
     return view('adm');
 });
+
+Route::get('/edit', function () {
+    return view('edit');
+});
+
 Route::get('/game', function () {
     return view('game');
 });
@@ -44,4 +49,5 @@ Route::group(['middleware' => ['web']], function(){
 Route::get('/perfil', function () {
     return view('resources/views/profile/update-profile-information-form.blade.php'
 );
+
 });

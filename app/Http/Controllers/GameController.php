@@ -17,14 +17,6 @@ class GameController extends Controller
         $category = Category::all();
         return view('adm', ['todosjogos' => $game, 'categorias' =>$category ]);
     }
-    //EU IA SALVAR A IMAGEM AGORA
-     //EU IA SALVAR A IMAGEM AGORA
-      //EU IA SALVAR A IMAGEM AGORA
-       //EU IA SALVAR A IMAGEM AGORA
-        //EU IA SALVAR A IMAGEM AGORA
-         //EU IA SALVAR A IMAGEM AGORA
-          //EU IA SALVAR A IMAGEM AGORA
-           //EU IA SALVAR A IMAGEM AGORA
 
     public function store(Request $request)
     {
