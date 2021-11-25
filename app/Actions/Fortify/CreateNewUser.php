@@ -33,12 +33,12 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'profile_photo_path' => $input['email'],
             'password' => Hash::make($input['password']),
-            'profile_photo_path'=>'/img/default.png',
-            'user_desc'=>$input['email'],
-            'post1'=>'/img/souls meme.jpeg',
-            'post2'=>'/img/souls meme.jpeg',
-            'post3'=>'/img/souls meme.jpeg',
-            'post4'=>'/img/souls meme.jpeg',
+            'profile_photo_path'=>'default.png',
+            'user_desc'=>'Escreva algo aqui',
+            'post1'=>'default_publi.png',
+            'post2'=>'default_publi.png',
+            'post3'=>'default_publi.png',
+            'post4'=>'default_publi.png',
         ]);
     }
 }

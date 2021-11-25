@@ -67,7 +67,7 @@
     border-radius: 5px;
     width: 50%;
     height: 5vh;
-    margin-top: 15px;
+    margin-top: 77px;
     margin-left: 15px;
     border: 0.1px solid white;
 }
@@ -84,7 +84,7 @@
     width: 50%;
     height: 5vh;
     margin-top: 15px;
-    margin-left: 38px;
+    margin-left: 10px;
     border: 0.1px solid white;
     backface-visibility: hidden;
 }
@@ -128,7 +128,6 @@
 .print-img {
     width: 400px;
     margin: 20px;
-    border: 2px solid white;
 }
 
 .print-img img {
@@ -177,10 +176,9 @@
     position: absolute;
     left: 399px;
     width: 399px;
-    height: 399px;
+    height: 338px;
     color: transparent;
     background-color: transparent;
-    border: 2px solid white;
 }
 
 #file_publi::file-selector-button {
@@ -232,7 +230,7 @@
     position: absolute;
     left: 839px;
     width: 399px;
-    height: 399px;
+    height: 338px;
     color: transparent;
     background-color: transparent;
 }
@@ -260,7 +258,7 @@
     left: 399px;
     width: 399px;
     height: 399px;
-    top: 926px;
+    top: 864px;
 }
 
 #file_publi3::file-selector-button {
@@ -281,20 +279,12 @@
     height: 399px;
 }
 
-#file_publi3 {
-    position: absolute;
-    left: 399px;
-    width: 399px;
-    height: 399px;
-    top: 926px;
-}
-
 #file_publi4 {
     position: absolute;
     left: 839px;
     width: 399px;
     height: 399px;
-    top: 926px;
+    top: 864px;
 }
 
 #file_publi4::file-selector-button {
