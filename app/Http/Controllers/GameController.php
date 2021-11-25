@@ -130,12 +130,99 @@ class GameController extends Controller
         return view('welcome', ['games' => $games, 'categorias' =>$cats ]);
     }
 
+    public function editperfil()
+    {
+        $user = Auth::User();
+        
+        return view('edit', ['user'=>$user]);
+    }
+
+    public function alterperfil(Request $request)
+    {
+        
+        $user = User::findOrFail($request->id);
+        $user->name=$request->cx_nick;
+        $user->user_desc=$request->cx_desc;
+
+        if($request->hasFile('file_foto') && $request->file('file_foto')->isValid()) {
+
+            $requestImage = $request->file_foto;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/perfil'), $imageName);
+
+            $user->profile_photo_path = $imageName;
+
+        }
+
+        if($request->hasFile('filepubli1') && $request->file('filepubli1')->isValid()) {
+
+            $requestImage = $request->filepubli1;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/perfil'), $imageName);
+
+            $user->post1 = $imageName;
+
+        }
+        if($request->hasFile('filepubli4') && $request->file('filepubli4')->isValid()) {
+
+            $requestImage = $request->filepubli4;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/perfil'), $imageName);
+
+            $user->post4 = $imageName;
+
+        }
+        if($request->hasFile('filepubli2') && $request->file('filepubli2')->isValid()) {
+
+            $requestImage = $request->filepubli2;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/perfil'), $imageName);
+
+            $user->post2 = $imageName;
+
+        }
+        if($request->hasFile('filepubli3') && $request->file('filepubli3')->isValid()) {
+
+            $requestImage = $request->filepubli3;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/perfil'), $imageName);
+
+            $user->post3 = $imageName;
+
+        }
+
+        $user->update();
+       
+
+        
+        return redirect('/dashboard');
+    }
+
     public function show($id) {
 
         $game = Games::findOrFail($id);
 
         $user = Auth::User();
-
 
         return view('game', ['game' => $game, 'user'=>$user]);
         

@@ -25,9 +25,9 @@ Route::get('/adm', function () {
     return view('adm');
 });
 
-Route::get('/edit', function () {
-    return view('edit');
-});
+Route::get('/edit', [GameController::class, 'editperfil']);
+
+Route::post('/edit/save', [GameController::class, 'alterperfil']);
 
 Route::get('/game', function () {
     return view('game');
