@@ -27,6 +27,7 @@
         <div class="line2">
             <div class="gamedescription">
                 <p>{{ $game->description }}</p>
+                <p>~{{ $game->desenvolvedor }}</p>
             </div>
             <div class="gameimages">
                 <img src="/img/games/{{ $game->print1 }}" alt="{{ $game->nome }}">
